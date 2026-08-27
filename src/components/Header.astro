@@ -5,29 +5,38 @@ const nav = [
   { href: "/boksers/", label: "Boksers" },
   { href: "/boksen/", label: "Boksen" },
   { href: "/nieuws/", label: "Nieuws" },
-  { href: "/contact/", label: "Contact" },
 ];
-const isCurrent = (href: string) => pathname === href || pathname.startsWith(href);
+const isCurrent = (href: string) =>
+  pathname === href || (href !== "/" && pathname.startsWith(href));
 ---
 
 <header class="site-header">
   <div class="wrap bar">
     <a class="brand" href="/" aria-label="Boksen-Nederland.nl — naar de homepage">
-      <img src="/logo.svg" alt="Boksen-Nederland.nl" height="34" />
+      <img src="/logo.svg" alt="Boksen-Nederland.nl" height="30" />
     </a>
 
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu openen">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      aria-label="Menu openen"
+    >
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
         <line x1="3" y1="7" x2="21" y2="7"></line>
         <line x1="3" y1="12" x2="21" y2="12"></line>
         <line x1="3" y1="17" x2="21" y2="17"></line>
       </svg>
     </button>
 
-    <nav class="nav" id="site-nav">
+    <nav class="nav" id="site-nav" aria-label="Hoofdmenu">
       {nav.map((item) => (
-        <a href={item.href} aria-current={isCurrent(item.href) ? "page" : undefined}>{item.label}</a>
+        <a href={item.href} aria-current={isCurrent(item.href) ? "page" : undefined}>
+          {item.label}
+        </a>
       ))}
+      <a href="/contact/" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
@@ -35,8 +44,19 @@ const isCurrent = (href: string) => pathname === href || pathname.startsWith(hre
 <script>
   const toggle = document.querySelector<HTMLButtonElement>(".nav-toggle");
   const nav = document.querySelector<HTMLElement>("#site-nav");
+
   toggle?.addEventListener("click", () => {
     const open = nav?.classList.toggle("open");
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle.setAttribute("aria-label", open ? "Menu sluiten" : "Menu openen");
+  });
+
+  // sluit het mobiele menu bij Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && nav?.classList.contains("open")) {
+      nav.classList.remove("open");
+      toggle?.setAttribute("aria-expanded", "false");
+      toggle?.focus();
+    }
   });
 </script>

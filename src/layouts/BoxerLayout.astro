@@ -1,32 +1,64 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 
-const { entry } = Astro.props;
+const { entry, headings = [] } = Astro.props;
 const d = entry.data;
+const toc = (headings || []).filter((h: any) => h.depth === 2);
+
+const cleanName = d.title.replace(/\s*boxing record$/i, "");
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: cleanName,
+  ...(d.nickname ? { alternateName: d.nickname } : {}),
+  jobTitle: "Bokser",
+  url: new URL(Astro.url.pathname, Astro.site).href,
+};
 ---
 
 <BaseLayout
   title={d.metaTitle || `${d.title} — Boksen-Nederland.nl`}
   description={d.description || ""}
   image={d.heroImage}
+  schema={schema}
 >
-  <div class="gym-head">
+  <div class="detail-head">
     <div class="wrap">
-      {d.nickname && <span class="city">{d.nickname}</span>}
+      {d.nickname && <span class="place">&ldquo;{d.nickname}&rdquo;</span>}
       <h1>{d.title}</h1>
+      {d.description && <p style="color:var(--on-dark-muted);max-width:60ch;margin-top:.75rem">{d.description}</p>}
     </div>
   </div>
 
   <div class="wrap">
     <nav class="crumbs" aria-label="Kruimelpad">
-      <a href="/">Home</a> &rsaquo; <a href="/boksers/">Boksers</a> &rsaquo;
-      <span>{d.title}</span>
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <a href="/boksers/">Boksers</a>
+      <span class="sep">›</span>
+      <span>{cleanName}</span>
     </nav>
   </div>
 
   <section class="section">
-    <div class="wrap-narrow prose">
-      <slot />
+    <div class="wrap">
+      <div class="article-layout">
+        <div class="prose">
+          <slot />
+        </div>
+
+        {toc.length > 2 && (
+          <nav class="toc" aria-label="Inhoudsopgave">
+            <h2>Inhoud</h2>
+            <ol>
+              {toc.map((h: any) => (
+                <li><a href={`#${h.slug}`}>{h.text}</a></li>
+              ))}
+            </ol>
+          </nav>
+        )}
+      </div>
     </div>
   </section>
 
@@ -42,3 +74,23 @@ const d = entry.data;
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const links = [...document.querySelectorAll<HTMLAnchorElement>(".toc a")];
+  if (links.length) {
+    const map = new Map<string, HTMLAnchorElement>();
+    for (const a of links) map.set(decodeURIComponent(a.hash.slice(1)), a);
+    const heads = [...document.querySelectorAll<HTMLElement>(".prose h2[id]")];
+    const obs = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting) continue;
+          links.forEach((l) => l.classList.remove("active"));
+          map.get(e.target.id)?.classList.add("active");
+        }
+      },
+      { rootMargin: "-90px 0px -70% 0px", threshold: 0 }
+    );
+    heads.forEach((h) => obs.observe(h));
+  }
+</script>

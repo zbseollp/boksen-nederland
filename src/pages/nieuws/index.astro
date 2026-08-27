@@ -14,33 +14,38 @@ const dateFmt = (d: Date) =>
   title="Nieuws - Boksen-Nederland.nl"
   description="Bekijk hier het laatste boksen nieuws van Nederland: achtergronden, tips en verhalen uit de bokssport."
 >
-  <section class="hero">
+  <section class="hero hero-compact">
     <div class="wrap lead">
+      <div class="eyebrow-line">Bokssport</div>
       <h1>Nieuws</h1>
-      <p>Bekijk hieronder het laatste boksen nieuws van Nederland.</p>
+      <p class="sub">Bekijk hieronder het laatste boksen nieuws van Nederland.</p>
     </div>
   </section>
 
   <div class="wrap">
     <nav class="crumbs" aria-label="Kruimelpad">
-      <a href="/">Home</a> &rsaquo; <span>Nieuws</span>
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <span>Nieuws</span>
     </nav>
   </div>
 
   <section class="section">
     <div class="wrap">
       <div class="section-head">
-        <h2>Alle artikelen</h2>
-        <p>{posts.length} artikelen, nieuwste eerst.</p>
+        <div>
+          <h2>Alle artikelen</h2>
+          <p>{posts.length} artikelen, nieuwste eerst.</p>
+        </div>
       </div>
 
       <div class="grid grid-3">
         {posts.map((post) => (
           <article class="card">
             {post.data.heroImage && (
-              <a href={`/${post.id}/`} class="card-media">
-                <img src={post.data.heroImage} alt={post.data.title} loading="lazy" />
-              </a>
+              <div class="card-media">
+                <img src={post.data.heroImage} alt="" loading="lazy" />
+              </div>
             )}
             <div class="card-body">
               {post.data.categories?.[0] && <span class="tag">{post.data.categories[0]}</span>}

@@ -6,13 +6,21 @@ export async function getStaticPaths() {
   const cities = await getCollection('cities');
   const gyms = await getCollection('gyms');
 
+  const byCity = new Map<string, typeof gyms>();
+  for (const g of gyms) {
+    const cs = g.data.citySlug;
+    if (!cs) continue;
+    if (!byCity.has(cs)) byCity.set(cs, [] as any);
+    byCity.get(cs)!.push(g);
+  }
+
   return cities.map((entry) => ({
     params: { city: entry.id },
     props: {
       entry,
-      gyms: gyms
-        .filter((g) => g.data.citySlug === entry.id)
-        .sort((a, b) => a.data.title.localeCompare(b.data.title, 'nl')),
+      gyms: (byCity.get(entry.id) || []).sort((a, b) =>
+        a.data.title.localeCompare(b.data.title, 'nl')
+      ),
     },
   }));
 }
@@ -20,45 +28,66 @@ export async function getStaticPaths() {
 const { entry, gyms } = Astro.props;
 const d = entry.data;
 
-// vermeldingen uit de bron-pagina die (nog) geen eigen collectie-item hebben
 const known = new Set(gyms.map((g: any) => `/${g.id}/`));
 const extra = (d.gyms || []).filter((g: any) => !known.has(g.href));
 const total = gyms.length + extra.length;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `Boksscholen in ${d.city}`,
+  url: new URL(Astro.url.pathname, Astro.site).href,
+  numberOfItems: total,
+};
 ---
 
 <BaseLayout
   title={d.metaTitle || `Boksen in ${d.city} — Boksen-Nederland.nl`}
   description={d.metaDesc || `Alle boksscholen en sportscholen in ${d.city} waar je kunt boksen.`}
+  schema={schema}
 >
-  <section class="hero">
+  <section class="hero hero-compact">
     <div class="wrap lead">
+      <div class="eyebrow-line">Boksscholen</div>
       <h1>Boksen in {d.city}</h1>
-      <p>
+      <p class="sub">
         {d.intro ||
           `Op zoek naar een boksschool in ${d.city}? Hieronder vind je alle sportscholen in ${d.city} waar je kunt boksen, met adres, contactgegevens en trainingstijden.`}
       </p>
-      <p class="hero-sub">{total} {total === 1 ? 'sportschool' : 'sportscholen'} gevonden in {d.city}.</p>
     </div>
   </section>
 
   <div class="wrap">
     <nav class="crumbs" aria-label="Kruimelpad">
-      <a href="/">Home</a> &rsaquo; <a href="/scholen/">Boksscholen</a> &rsaquo;
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <a href="/scholen/">Boksscholen</a>
+      <span class="sep">›</span>
       <span>{d.city}</span>
     </nav>
   </div>
 
   <section class="section">
     <div class="wrap">
-      <div class="section-head">
-        <h2>Boksscholen in {d.city}</h2>
-        <p>Klik op een sportschool voor adres, contactgegevens en trainingstijden.</p>
-      </div>
+      {total > 0 && (
+        <div class="filter-bar" data-city-filter>
+          <label class="filter-input">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+            </svg>
+            <input type="search" placeholder={`Filter binnen ${d.city}…`} aria-label={`Filter sportscholen in ${d.city}`} />
+          </label>
+          <span class="filter-count" data-count>
+            {total} {total === 1 ? 'sportschool' : 'sportscholen'}
+          </span>
+        </div>
+      )}
 
       {gyms.length > 0 && (
-        <div class="grid grid-3">
+        <div class="grid grid-3" data-filter-list>
           {gyms.map((g: any) => (
-            <a class="tile" href={`/${g.id}/`}>
+            <a class="tile" href={`/${g.id}/`} data-name={g.data.title.toLowerCase()}>
               <strong>{g.data.title}</strong>
               <span>{g.data.address || d.city}</span>
             </a>
@@ -68,17 +97,21 @@ const total = gyms.length + extra.length;
 
       {extra.length > 0 && (
         <>
-          <h3 style="margin-top:2.5rem">Overige sportscholen</h3>
-          <ul class="chip-list">
+          <h2 style="margin-top:2.5rem;font-size:1.25rem">Overige sportscholen</h2>
+          <ul class="chip-list" data-filter-list>
             {extra.map((g: any) => (
-              <li><a href={g.href}>{g.name}</a></li>
+              <li data-name={g.name.toLowerCase()}><a href={g.href}>{g.name}</a></li>
             ))}
           </ul>
         </>
       )}
 
+      <p class="empty-state" data-empty hidden>
+        Geen sportscholen gevonden die aan je filter voldoen.
+      </p>
+
       {total === 0 && (
-        <p>Er zijn nog geen sportscholen bekend in {d.city}.</p>
+        <p class="empty-state">Er zijn nog geen sportscholen bekend in {d.city}.</p>
       )}
     </div>
   </section>
@@ -95,3 +128,32 @@ const total = gyms.length + extra.length;
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const bar = document.querySelector<HTMLElement>('[data-city-filter]');
+  if (bar) {
+    const input = bar.querySelector<HTMLInputElement>('input');
+    const countEl = bar.querySelector<HTMLElement>('[data-count]');
+    const empty = document.querySelector<HTMLElement>('[data-empty]');
+    const items = [
+      ...document.querySelectorAll<HTMLElement>('[data-filter-list] [data-name]'),
+    ];
+    const total = items.length;
+
+    input?.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase();
+      let shown = 0;
+      for (const el of items) {
+        const hit = !q || (el.dataset.name || '').includes(q);
+        el.style.display = hit ? '' : 'none';
+        if (hit) shown++;
+      }
+      if (countEl) {
+        countEl.textContent = q
+          ? `${shown} van ${total} ${total === 1 ? 'sportschool' : 'sportscholen'}`
+          : `${total} ${total === 1 ? 'sportschool' : 'sportscholen'}`;
+      }
+      if (empty) empty.hidden = shown !== 0;
+    });
+  }
+</script>

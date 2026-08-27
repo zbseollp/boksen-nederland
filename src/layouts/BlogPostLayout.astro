@@ -1,11 +1,26 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 
-const { entry, related = [] } = Astro.props;
+const { entry, related = [], headings = [], readingTime } = Astro.props;
 const { data } = entry;
 
 const dateFmt = (d: Date) =>
   new Intl.DateTimeFormat("nl-NL", { day: "numeric", month: "long", year: "numeric" }).format(d);
+
+// alleen h2's in de inhoudsopgave; h3 maakt hem te rommelig
+const toc = (headings || []).filter((h: any) => h.depth === 2);
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: data.title,
+  description: data.description,
+  datePublished: data.pubDate?.toISOString(),
+  dateModified: (data.updatedDate || data.pubDate)?.toISOString(),
+  author: { "@type": "Organization", name: data.author || "Boksen-Nederland.nl" },
+  publisher: { "@type": "Organization", name: "Boksen-Nederland.nl" },
+  mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).href,
+};
 ---
 
 <BaseLayout
@@ -15,47 +30,89 @@ const dateFmt = (d: Date) =>
   type="article"
   publishedTime={data.pubDate?.toISOString()}
   modifiedTime={data.updatedDate?.toISOString()}
+  schema={schema}
 >
-  <div class="wrap-narrow">
+  <div class="wrap">
     <nav class="crumbs" aria-label="Kruimelpad">
-      <a href="/">Home</a> &rsaquo; <a href="/nieuws/">Nieuws</a> &rsaquo;
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <a href="/nieuws/">Nieuws</a>
+      <span class="sep">›</span>
       <span>{data.title}</span>
     </nav>
   </div>
 
   <article>
     <header class="article-header wrap-narrow">
-      <h1>{data.title}</h1>
-      <p class="article-meta">
-        {data.author && <>Door {data.author} &middot; </>}
+      {data.categories?.[0] && <span class="tag">{data.categories[0]}</span>}
+      <h1 style="margin-top:.7rem">{data.title}</h1>
+      <div class="article-meta">
+        {data.author && <span>Door {data.author}</span>}
+        <span class="dot">•</span>
         <time datetime={data.pubDate?.toISOString()}>{dateFmt(data.pubDate)}</time>
-        {data.updatedDate && (
-          <> &middot; bijgewerkt op <time datetime={data.updatedDate.toISOString()}>{dateFmt(data.updatedDate)}</time></>
+        {readingTime && (
+          <>
+            <span class="dot">•</span>
+            <span>{readingTime} min lezen</span>
+          </>
         )}
-      </p>
+        {data.updatedDate && (
+          <>
+            <span class="dot">•</span>
+            <span>bijgewerkt {dateFmt(data.updatedDate)}</span>
+          </>
+        )}
+      </div>
     </header>
 
     {data.heroImage && (
-      <div class="wrap-narrow">
-        <img src={data.heroImage} alt={data.title} class="hero-img" style="border-radius:14px;margin-bottom:2rem" />
+      <div class="wrap" style="margin-bottom:2.5rem">
+        <img
+          src={data.heroImage}
+          alt=""
+          style="border-radius:var(--radius-lg);width:100%;max-height:460px;object-fit:cover"
+        />
       </div>
     )}
 
-    <div class="wrap-narrow prose">
-      <slot />
+    <div class="wrap">
+      <div class="article-layout">
+        <div class="prose">
+          <slot />
+        </div>
+
+        {toc.length > 2 && (
+          <nav class="toc" aria-label="Inhoudsopgave">
+            <h2>Inhoud</h2>
+            <ol>
+              {toc.map((h: any) => (
+                <li><a href={`#${h.slug}`}>{h.text}</a></li>
+              ))}
+            </ol>
+          </nav>
+        )}
+      </div>
     </div>
   </article>
 
   {related.length > 0 && (
-    <section class="section section-alt" style="margin-top:4rem">
+    <section class="section section-sunken" style="margin-top:4rem">
       <div class="wrap">
         <div class="section-head">
-          <h2>Meer nieuws</h2>
-          <p>Ander nieuws dat je misschien interessant vindt.</p>
+          <div>
+            <h2>Meer nieuws</h2>
+            <p>Ander nieuws dat je misschien interessant vindt.</p>
+          </div>
+          <a class="btn btn-quiet btn-sm" href="/nieuws/">Al het nieuws</a>
         </div>
         <div class="grid grid-3">
           {related.map((p: any) => (
             <article class="card">
+              {p.data.heroImage && (
+                <div class="card-media">
+                  <img src={p.data.heroImage} alt="" loading="lazy" />
+                </div>
+              )}
               <div class="card-body">
                 <h3><a href={`/${p.id}/`}>{p.data.title}</a></h3>
                 <p>{p.data.description}</p>
@@ -70,3 +127,25 @@ const dateFmt = (d: Date) =>
     </section>
   )}
 </BaseLayout>
+
+<script>
+  // markeer de actieve sectie in de inhoudsopgave
+  const links = [...document.querySelectorAll<HTMLAnchorElement>(".toc a")];
+  if (links.length) {
+    const map = new Map<string, HTMLAnchorElement>();
+    for (const a of links) map.set(decodeURIComponent(a.hash.slice(1)), a);
+
+    const heads = [...document.querySelectorAll<HTMLElement>(".prose h2[id]")];
+    const obs = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting) continue;
+          links.forEach((l) => l.classList.remove("active"));
+          map.get(e.target.id)?.classList.add("active");
+        }
+      },
+      { rootMargin: "-90px 0px -70% 0px", threshold: 0 }
+    );
+    heads.forEach((h) => obs.observe(h));
+  }
+</script>

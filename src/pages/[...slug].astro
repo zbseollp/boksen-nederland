@@ -22,34 +22,57 @@ export async function getStaticPaths() {
     },
   }));
 
-  // Boksschool-vermeldingen en boksers delen de root-namespace met de posts
-  const gyms = gymEntries.map((entry) => ({
-    params: { slug: entry.id },
-    props: { entry, type: 'gym', related: [] },
-  }));
+  // index van sportscholen per plaats, zodat elke detailpagina buren kan tonen
+  const byCity = new Map<string, typeof gymEntries>();
+  for (const g of gymEntries) {
+    const cs = g.data.citySlug;
+    if (!cs) continue;
+    if (!byCity.has(cs)) byCity.set(cs, [] as any);
+    byCity.get(cs)!.push(g);
+  }
+
+  const gyms = gymEntries.map((entry) => {
+    const cs = entry.data.citySlug;
+    const siblings = cs ? byCity.get(cs) || [] : [];
+    const nearbyEntries = siblings
+      .filter((g) => g.id !== entry.id)
+      .sort((a, b) => a.data.title.localeCompare(b.data.title, 'nl'))
+      .slice(0, 6);
+    return {
+      params: { slug: entry.id },
+      props: { entry, type: 'gym', related: [], nearbyEntries },
+    };
+  });
 
   const boxers = boxerEntries.map((entry) => ({
     params: { slug: entry.id },
-    props: { entry, type: 'boxer', related: [] },
+    props: { entry, type: 'boxer', related: [], nearbyEntries: [] },
   }));
 
   return [...posts, ...gyms, ...boxers];
 }
 
-const { entry, type, related } = Astro.props;
+const { entry, type, related, nearbyEntries } = Astro.props;
 
 const rendered = type === 'post' || type === 'boxer' ? await render(entry) : null;
 const Content = rendered?.Content;
+const headings = rendered?.headings ?? [];
+
+// ruwe leestijd op basis van de body (200 woorden per minuut)
+const readingTime =
+  type === 'post' && entry.body
+    ? Math.max(1, Math.round(entry.body.split(/\s+/).length / 200))
+    : undefined;
 ---
 
 {type === 'post' ? (
-  <BlogPostLayout entry={entry} related={related}>
+  <BlogPostLayout entry={entry} related={related} headings={headings} readingTime={readingTime}>
     <Content />
   </BlogPostLayout>
 ) : type === 'boxer' ? (
-  <BoxerLayout entry={entry}>
+  <BoxerLayout entry={entry} headings={headings}>
     <Content />
   </BoxerLayout>
 ) : (
-  <GymLayout entry={entry} />
+  <GymLayout entry={entry} nearbyEntries={nearbyEntries} />
 )}

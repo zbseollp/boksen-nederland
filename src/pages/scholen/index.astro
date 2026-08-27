@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SearchBox from '../../components/SearchBox.astro';
 
 const cities = (await getCollection('cities')).sort((a, b) =>
   a.data.city.localeCompare(b.data.city, 'nl')
@@ -13,7 +14,6 @@ for (const g of gyms) {
   if (cs) counts.set(cs, (counts.get(cs) || 0) + 1);
 }
 
-// groepeer op beginletter, net als op de bronsite
 const groups = new Map<string, typeof cities>();
 for (const c of cities) {
   const letter = (c.data.city[0] || '#').toUpperCase();
@@ -22,56 +22,48 @@ for (const c of cities) {
   groups.get(key)!.push(c);
 }
 const letters = [...groups.keys()].sort();
+const nf = (n: number) => n.toLocaleString('nl-NL');
 ---
 
 <BaseLayout
   title="Alle boksscholen in Nederland vind je hier (Boxing gyms)!"
   description="Bekijk hier een lijst van boksscholen bij jou in de buurt. Vind direct een boxing gym in jouw regio en begin met trainen!"
 >
-  <section class="hero">
+  <section class="hero hero-compact">
     <div class="wrap lead">
+      <div class="eyebrow-line">Register</div>
       <h1>Boksscholen in Nederland</h1>
-      <p>
-        Op zoek naar een boksschool bij jou in de buurt? Hieronder vind je een lijst
-        van alle regio&rsquo;s waar je in Nederland boksen kunt beoefenen. Als je
-        doorklikt op een regio zul je hier een lijst vinden van alle sportscholen in
-        deze regio!
+      <p class="sub">
+        Op zoek naar een boksschool bij jou in de buurt? Hieronder vind je alle
+        regio&rsquo;s waar je in Nederland kunt boksen &mdash;
+        {nf(gyms.length)} sportscholen in {nf(cities.length)} plaatsen.
       </p>
-      <p class="hero-sub">
-        {gyms.length.toLocaleString('nl-NL')} sportscholen in {cities.length.toLocaleString('nl-NL')} plaatsen.
-      </p>
+      <SearchBox id="scholen-search" placeholder="Zoek op plaats of schoolnaam…" />
     </div>
   </section>
 
   <div class="wrap">
     <nav class="crumbs" aria-label="Kruimelpad">
-      <a href="/">Home</a> &rsaquo; <span>Boksscholen in Nederland</span>
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <span>Boksscholen in Nederland</span>
     </nav>
   </div>
 
   <section class="section">
     <div class="wrap">
-      <div class="section-head">
-        <h2>Boksscholen bij jou in de buurt</h2>
-        <p>
-          Hieronder vind je een register van boksscholen per regio. Klik op
-          onderstaande locatie om verder te gaan naar de pagina om de sportscholen te
-          bekijken.
-        </p>
-      </div>
-
-      <ul class="chip-list" style="margin-bottom:2.5rem">
-        {letters.map((l) => <li><a href={`#letter-${l}`}>{l}</a></li>)}
-      </ul>
+      <nav class="alpha-nav" aria-label="Spring naar letter">
+        {letters.map((l) => <a href={`#letter-${l}`}>{l}</a>)}
+      </nav>
 
       {letters.map((l) => (
-        <div id={`letter-${l}`} style="margin-bottom:2.5rem;scroll-margin-top:90px">
-          <h3 style="margin-top:0">{l}</h3>
+        <div class="letter-group" id={`letter-${l}`}>
+          <h3>{l}</h3>
           <ul class="col-list">
             {groups.get(l)!.map((c) => (
               <li>
                 <a href={`/scholen/${c.id}/`}>{c.data.city}</a>
-                {counts.get(c.id) ? <span style="color:var(--muted)"> ({counts.get(c.id)})</span> : null}
+                {counts.get(c.id) ? <span class="count-pill"> ({counts.get(c.id)})</span> : null}
               </li>
             ))}
           </ul>

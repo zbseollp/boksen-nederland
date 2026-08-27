@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SearchBox from '../components/SearchBox.astro';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -9,11 +10,11 @@ const recent = posts.slice(0, 3);
 
 const cities = await getCollection('cities');
 const gyms = await getCollection('gyms');
+const boxers = await getCollection('boxers');
 
 const dateFmt = (d: Date) =>
   new Intl.DateTimeFormat('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' }).format(d);
 
-// tel vermeldingen per stad om de grootste regio's bovenaan te zetten
 const counts = new Map<string, number>();
 for (const g of gyms) {
   const cs = g.data.citySlug;
@@ -22,38 +23,55 @@ for (const g of gyms) {
 const topCities = [...cities]
   .sort((a, b) => (counts.get(b.id) || 0) - (counts.get(a.id) || 0))
   .slice(0, 12);
+
+const featuredBoxers = [...boxers]
+  .sort((a, b) => a.data.title.localeCompare(b.data.title, 'nl'))
+  .slice(0, 6);
+
+const nf = (n: number) => n.toLocaleString('nl-NL');
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Boksen-Nederland.nl',
+  url: 'https://boksen-nederland.nl/',
+  description:
+    'De boksen community van Nederland: vind boksscholen, bekijk boksrecords en lees het laatste boksnieuws.',
+};
 ---
 
 <BaseLayout
   title="Boksen Nederland - Boksen Community Nederland"
   description="Boksen-Nederland.nl is de boksen community van Nederland. Vindt hier Informatie over de sport boksen!"
+  schema={schema}
 >
   <section class="hero">
     <div class="wrap lead">
-      <h1>Welkom op Boksen-Nederland.nl</h1>
-      <p>
-        De grootste bokscommunity van Nederland. Via onze website kun je alles te
-        weten komen over de sport boksen! Helemaal nieuw in de sport? Lees je direct
-        verder in! Benieuwd waar je allemaal kunt boksen in Nederland? Kom erachter
-        via onze site!
+      <h1>Vind jouw boksschool</h1>
+      <p class="sub">
+        Welkom op Boksen-Nederland.nl, de grootste bokscommunity van Nederland. Zoek
+        tussen {nf(gyms.length)} sportscholen in {nf(cities.length)} plaatsen, bekijk
+        boksrecords en lees het laatste nieuws uit de bokssport.
       </p>
-      <div class="hero-actions">
-        <a class="btn" href="/scholen/">Vind een boksschool</a>
-        <a class="btn btn-ghost" href="/boksen/">Bokssport uitgelegd</a>
-      </div>
+
+      <SearchBox />
 
       <div class="stat-row">
         <div class="stat">
-          <strong>{gyms.length.toLocaleString('nl-NL')}</strong>
+          <strong>{nf(gyms.length)}</strong>
           <span>sportscholen</span>
         </div>
         <div class="stat">
-          <strong>{cities.length.toLocaleString('nl-NL')}</strong>
+          <strong>{nf(cities.length)}</strong>
           <span>plaatsen</span>
         </div>
         <div class="stat">
+          <strong>{boxers.length}</strong>
+          <span>boksers</span>
+        </div>
+        <div class="stat">
           <strong>{posts.length}</strong>
-          <span>nieuwsartikelen</span>
+          <span>artikelen</span>
         </div>
       </div>
     </div>
@@ -62,11 +80,14 @@ const topCities = [...cities]
   <section class="section">
     <div class="wrap">
       <div class="section-head">
-        <h2>Boksschool bij jou in de buurt</h2>
-        <p>
-          Op zoek naar een boksschool bij jou in de buurt? Hieronder kun je direct
-          bekijken welke locaties er allemaal in jouw omgeving zijn!
-        </p>
+        <div>
+          <h2>Boksen in de grote steden</h2>
+          <p>
+            Op zoek naar een boksschool bij jou in de buurt? Begin hier &mdash; of
+            gebruik de zoekbalk voor je eigen plaats.
+          </p>
+        </div>
+        <a class="btn btn-quiet btn-sm" href="/scholen/">Alle {nf(cities.length)} plaatsen</a>
       </div>
 
       <div class="grid grid-4">
@@ -77,30 +98,29 @@ const topCities = [...cities]
           </a>
         ))}
       </div>
-
-      <div style="text-align:center;margin-top:2.5rem">
-        <a class="btn" href="/scholen/">Alle plaatsen bekijken</a>
-      </div>
     </div>
   </section>
 
-  <section class="section section-alt">
-    <div class="wrap">
-      <div class="section-head">
+  <section class="section section-sunken">
+    <div class="section-head wrap">
+      <div>
         <h2>Laatste sportnieuws</h2>
-        <p>Bekijk hieronder het laatste boksen nieuws van Nederland.</p>
+        <p>Achtergronden, tips en verhalen uit de bokssport.</p>
       </div>
-
+      <a class="btn btn-quiet btn-sm" href="/nieuws/">Al het nieuws</a>
+    </div>
+    <div class="wrap">
       <div class="grid grid-3">
         {recent.map((post) => (
           <article class="card">
             {post.data.heroImage && (
-              <a href={`/${post.id}/`} class="card-media">
-                <img src={post.data.heroImage} alt={post.data.title} loading="lazy" />
-              </a>
+              <div class="card-media">
+                <img src={post.data.heroImage} alt="" loading="lazy" />
+              </div>
             )}
             <div class="card-body">
-              <h3><a href={`/${post.id}/`}>{post.data.title}</a></h3>
+              {post.data.categories?.[0] && <span class="tag">{post.data.categories[0]}</span>}
+              <h3 style="margin-top:.55rem"><a href={`/${post.id}/`}>{post.data.title}</a></h3>
               <p>{post.data.description}</p>
               <div class="meta">
                 <time datetime={post.data.pubDate.toISOString()}>{dateFmt(post.data.pubDate)}</time>
@@ -109,10 +129,24 @@ const topCities = [...cities]
           </article>
         ))}
       </div>
+    </div>
+  </section>
 
-      <div style="text-align:center;margin-top:2.5rem">
-        <a class="btn" href="/nieuws/">Al het nieuws bekijken</a>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Boksrecords</h2>
+          <p>Bekijk de statistieken, titels en gevechten van bekende boksers.</p>
+        </div>
+        <a class="btn btn-quiet btn-sm" href="/boksers/">Alle boksers</a>
       </div>
+
+      <ul class="chip-list">
+        {featuredBoxers.map((b) => (
+          <li><a href={`/${b.id}/`}>{b.data.title.replace(' boxing record', '')}</a></li>
+        ))}
+      </ul>
     </div>
   </section>
 
@@ -123,7 +157,7 @@ const topCities = [...cities]
           <h2>Staat jouw sportschool er niet bij?</h2>
           <p>Laat het ons weten, dan voegen we de gegevens toe.</p>
         </div>
-        <a class="btn" href="/contact/">Neem contact op</a>
+        <a class="btn" href="/contact/">Sportschool aanmelden</a>
       </div>
     </div>
   </section>

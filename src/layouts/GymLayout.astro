@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 
-const { entry } = Astro.props;
+const { entry, nearbyEntries = [] } = Astro.props;
 const d = entry.data;
 
 const mapsUrl = d.address
@@ -11,106 +11,204 @@ const mapsUrl = d.address
 const websiteLabel = d.website
   ? d.website.replace(/^https?:\/\//, "").replace(/\/$/, "")
   : null;
+
+const schema: Record<string, any> = {
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  name: d.title,
+  url: new URL(Astro.url.pathname, Astro.site).href,
+};
+if (d.address) {
+  schema.address = { "@type": "PostalAddress", streetAddress: d.address, addressCountry: "NL" };
+  if (d.city) schema.address.addressLocality = d.city;
+}
+if (d.phone) schema.telephone = d.phone;
+if (d.website) schema.sameAs = [d.website];
 ---
 
 <BaseLayout
   title={d.metaTitle || `${d.title} — Boksen-Nederland.nl`}
   description={d.metaDesc || d.intro || ""}
+  schema={schema}
 >
-  <div class="gym-head">
+  <div class="detail-head">
     <div class="wrap">
-      {d.city && (
-        <a class="city" href={`/scholen/${d.citySlug}/`}>{d.city}</a>
+      {d.city && d.citySlug && (
+        <a class="place" href={`/scholen/${d.citySlug}/`}>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"></path>
+            <circle cx="12" cy="10" r="2.6"></circle>
+          </svg>
+          {d.city}
+        </a>
       )}
       <h1>{d.title}</h1>
+
+      <div class="detail-meta">
+        {d.address && (
+          <span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"></path>
+            </svg>
+            {d.address}
+          </span>
+        )}
+        {d.phone && (
+          <span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z"></path>
+            </svg>
+            {d.phone}
+          </span>
+        )}
+        {d.lastUpdated && (
+          <span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 7v5l3 2"></path>
+            </svg>
+            Bijgewerkt {d.lastUpdated}
+          </span>
+        )}
+      </div>
     </div>
   </div>
 
   <div class="wrap">
     <nav class="crumbs" aria-label="Kruimelpad">
-      <a href="/">Home</a> &rsaquo; <a href="/scholen/">Boksscholen</a>
-      {d.city && (
-        <> &rsaquo; <a href={`/scholen/${d.citySlug}/`}>{d.city}</a></>
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <a href="/scholen/">Boksscholen</a>
+      {d.city && d.citySlug && (
+        <>
+          <span class="sep">›</span>
+          <a href={`/scholen/${d.citySlug}/`}>{d.city}</a>
+        </>
       )}
-      &rsaquo; <span>{d.title}</span>
+      <span class="sep">›</span>
+      <span>{d.title}</span>
     </nav>
   </div>
 
   <section class="section">
-    <div class="wrap gym-layout">
-      <div class="prose">
-        {d.intro && <p>{d.intro}</p>}
+    <div class="wrap detail-layout">
+      <div>
+        {d.intro && <p style="font-size:1.1rem;color:var(--text-muted)">{d.intro}</p>}
 
-        <h2>Locatie</h2>
-        {d.address ? (
-          <p>
-            {d.title} is gevestigd aan <strong>{d.address}</strong>.
-            {mapsUrl && (
-              <> Bekijk de <a href={mapsUrl} rel="nofollow noopener" target="_blank">locatie op de kaart</a>.</>
-            )}
+        <div class="info-block" style="margin-top:1.75rem">
+          <h2>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"></path>
+              <circle cx="12" cy="10" r="2.6"></circle>
+            </svg>
+            Locatie
+          </h2>
+          {d.address ? (
+            <p class="known">
+              {d.title} is gevestigd aan <strong>{d.address}</strong>.
+              {mapsUrl && (
+                <> <a href={mapsUrl} rel="nofollow noopener" target="_blank">Bekijk op de kaart</a>.</>
+              )}
+            </p>
+          ) : (
+            <p>Het adres van {d.title} is bij ons niet bekend.</p>
+          )}
+        </div>
+
+        <div class="info-block">
+          <h2>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+              <path d="M3 10h18M8 3v4M16 3v4"></path>
+            </svg>
+            Trainingsschema
+          </h2>
+          <p class={d.schedule ? "known" : ""}>
+            {d.schedule ||
+              `De trainingstijden van ${d.title} zijn bij ons niet bekend. Neem contact op met de sportschool voor het actuele trainingsschema.`}
           </p>
-        ) : (
-          <p>Het adres van {d.title} is bij ons niet bekend.</p>
-        )}
+        </div>
 
-        <h2>Trainingsschema</h2>
-        <p>{d.schedule || `De trainingstijden van ${d.title} zijn bij ons niet bekend. Neem contact op met de sportschool voor het actuele trainingsschema.`}</p>
+        <div class="info-block">
+          <h2>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M9.5 9.5a2.5 2.5 0 1 1 3 3.5V15"></path>
+            </svg>
+            Kosten
+          </h2>
+          <p class={d.costs ? "known" : ""}>
+            {d.costs ||
+              `De contributie voor een abonnement bij ${d.title} is ons niet bekend. Neem contact op met de sportschool voor uitgebreide informatie.`}
+          </p>
+        </div>
 
-        <h2>Kosten</h2>
-        <p>{d.costs || `De contributie voor een abonnement bij ${d.title} is ons niet bekend. Neem contact op met de sportschool voor uitgebreide informatie met betrekking tot abonnementen.`}</p>
-
-        {d.nearby && d.nearby.length > 0 && (
-          <>
-            <h2>Boksscholen in {d.city}</h2>
-            <p>Bekijk hieronder informatie over andere sportscholen in {d.city}.</p>
-            <ul class="col-list">
-              {d.nearby.map((n: any) => (
-                <li><a href={n.href}>{n.name}</a></li>
+        {nearbyEntries.length > 0 && (
+          <div style="margin-top:2.5rem">
+            <h2 style="font-size:1.3rem">Andere boksscholen in {d.city}</h2>
+            <p style="color:var(--text-muted)">
+              Vergelijk {d.title} met andere sportscholen in de buurt.
+            </p>
+            <div class="grid grid-3" style="margin-top:1.25rem">
+              {nearbyEntries.map((n: any) => (
+                <a class="tile" href={`/${n.id}/`}>
+                  <strong>{n.data.title}</strong>
+                  <span>{n.data.address || d.city}</span>
+                </a>
               ))}
-            </ul>
-          </>
+            </div>
+            {d.citySlug && (
+              <p style="margin-top:1.25rem">
+                <a href={`/scholen/${d.citySlug}/`}>Bekijk alle boksscholen in {d.city} →</a>
+              </p>
+            )}
+          </div>
         )}
       </div>
 
       <aside class="factbox">
         <h2>Gegevens</h2>
         <dl>
-          <dt>Sportschool</dt>
-          <dd>{d.title}</dd>
+          <div>
+            <dt>Sportschool</dt>
+            <dd>{d.title}</dd>
+          </div>
 
-          {d.city && (
-            <>
+          {d.city && d.citySlug && (
+            <div>
               <dt>Plaats</dt>
               <dd><a href={`/scholen/${d.citySlug}/`}>{d.city}</a></dd>
-            </>
+            </div>
           )}
 
-          {d.address && (
-            <>
-              <dt>Adres</dt>
-              <dd>{d.address}</dd>
-            </>
-          )}
+          <div>
+            <dt>Adres</dt>
+            <dd>{d.address ? d.address : <span class="unknown">Niet bekend</span>}</dd>
+          </div>
 
-          {d.phone && (
-            <>
-              <dt>Telefoon</dt>
-              <dd><a href={`tel:${d.phone.replace(/\s/g, "")}`}>{d.phone}</a></dd>
-            </>
-          )}
+          <div>
+            <dt>Telefoon</dt>
+            <dd>
+              {d.phone
+                ? <a href={`tel:${d.phone.replace(/\s/g, "")}`}>{d.phone}</a>
+                : <span class="unknown">Niet bekend</span>}
+            </dd>
+          </div>
 
-          {d.website && (
-            <>
-              <dt>Website</dt>
-              <dd><a href={d.website} rel="nofollow noopener" target="_blank">{websiteLabel}</a></dd>
-            </>
-          )}
+          <div>
+            <dt>Website</dt>
+            <dd>
+              {d.website
+                ? <a href={d.website} rel="nofollow noopener" target="_blank">{websiteLabel}</a>
+                : <span class="unknown">Niet bekend</span>}
+            </dd>
+          </div>
 
           {d.lastUpdated && (
-            <>
+            <div>
               <dt>Laatst bijgewerkt</dt>
               <dd>{d.lastUpdated}</dd>
-            </>
+            </div>
           )}
         </dl>
 

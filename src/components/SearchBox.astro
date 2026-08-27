@@ -1,0 +1,167 @@
+---
+interface Props {
+  placeholder?: string;
+  id?: string;
+}
+const { placeholder = 'Zoek een boksschool of plaats…', id = 'site-search' } = Astro.props;
+---
+
+<div class="search" data-search>
+  <div class="search-field">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <circle cx="11" cy="11" r="7"></circle>
+      <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+    </svg>
+    <input
+      type="search"
+      id={id}
+      placeholder={placeholder}
+      autocomplete="off"
+      role="combobox"
+      aria-expanded="false"
+      aria-controls={`${id}-results`}
+      aria-label="Zoek een boksschool, plaats of bokser"
+    />
+  </div>
+  <div class="search-results" id={`${id}-results`} role="listbox" aria-label="Zoekresultaten"></div>
+</div>
+
+<script>
+  type Item = { n: string; u: string; k: string; c?: string };
+
+  const KIND_LABEL: Record<string, string> = {
+    p: 'Plaats',
+    s: 'School',
+    b: 'Bokser',
+    n: 'Nieuws',
+  };
+  // plaatsen eerst, dan scholen, dan de rest
+  const KIND_RANK: Record<string, number> = { p: 0, s: 1, b: 2, n: 3 };
+
+  const norm = (s: string) =>
+    s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+  function initSearch(root: HTMLElement) {
+    const input = root.querySelector<HTMLInputElement>('input');
+    const box = root.querySelector<HTMLElement>('.search-results');
+    if (!input || !box) return;
+
+    let index: Item[] | null = null;
+    let loading = false;
+    let active = -1;
+    let current: Item[] = [];
+
+    async function load() {
+      if (index || loading) return;
+      loading = true;
+      try {
+        const res = await fetch('/search-index.json');
+        index = (await res.json()) as Item[];
+      } catch {
+        index = [];
+      } finally {
+        loading = false;
+        if (input!.value.trim()) run(input!.value);
+      }
+    }
+
+    function close() {
+      box!.classList.remove('open');
+      input!.setAttribute('aria-expanded', 'false');
+      active = -1;
+    }
+
+    function render(items: Item[], q: string) {
+      current = items;
+      if (!q.trim()) return close();
+
+      if (!items.length) {
+        box!.innerHTML = `<div class="search-empty">Niets gevonden voor &ldquo;${q.replace(/[<>&]/g, '')}&rdquo;.</div>`;
+        box!.classList.add('open');
+        input!.setAttribute('aria-expanded', 'true');
+        return;
+      }
+
+      box!.innerHTML = items
+        .map((it, i) => {
+          const city = it.c ? `<span class="r-city">${it.c}</span>` : '';
+          return `<a href="${it.u}" role="option" data-i="${i}" aria-selected="false">
+            <span>${it.n}</span>
+            <span style="display:flex;gap:.5rem;align-items:center">${city}<span class="r-kind">${KIND_LABEL[it.k] || ''}</span></span>
+          </a>`;
+        })
+        .join('');
+      box!.classList.add('open');
+      input!.setAttribute('aria-expanded', 'true');
+      active = -1;
+    }
+
+    function run(q: string) {
+      if (!index) return;
+      const nq = norm(q.trim());
+      if (!nq) return close();
+
+      const starts: Item[] = [];
+      const contains: Item[] = [];
+      for (const it of index) {
+        const n = norm(it.n);
+        if (n.startsWith(nq)) starts.push(it);
+        else if (n.includes(nq)) contains.push(it);
+        if (starts.length > 40) break;
+      }
+      const rank = (a: Item, b: Item) =>
+        (KIND_RANK[a.k] ?? 9) - (KIND_RANK[b.k] ?? 9) || a.n.localeCompare(b.n, 'nl');
+      starts.sort(rank);
+      contains.sort(rank);
+      render([...starts, ...contains].slice(0, 12), q);
+    }
+
+    function setActive(i: number) {
+      const links = [...box!.querySelectorAll<HTMLAnchorElement>('a')];
+      links.forEach((l) => {
+        l.classList.remove('active');
+        l.setAttribute('aria-selected', 'false');
+      });
+      if (i >= 0 && links[i]) {
+        links[i].classList.add('active');
+        links[i].setAttribute('aria-selected', 'true');
+        links[i].scrollIntoView({ block: 'nearest' });
+      }
+      active = i;
+    }
+
+    input.addEventListener('focus', load, { once: true });
+    input.addEventListener('input', () => {
+      if (!index) {
+        load();
+        return;
+      }
+      run(input.value);
+    });
+
+    input.addEventListener('keydown', (e) => {
+      const links = box.querySelectorAll('a');
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (links.length) setActive((active + 1) % links.length);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (links.length) setActive((active - 1 + links.length) % links.length);
+      } else if (e.key === 'Enter') {
+        if (active >= 0 && current[active]) {
+          e.preventDefault();
+          window.location.href = current[active].u;
+        }
+      } else if (e.key === 'Escape') {
+        close();
+        input.blur();
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!root.contains(e.target as Node)) close();
+    });
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-search]').forEach(initSearch);
+</script>
