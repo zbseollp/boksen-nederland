@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactForm from '../../components/ContactForm.astro';
 ---
 
 <BaseLayout title="Contact - Boksen-Nederland.nl" description="Contact Heb je vragen, suggesties of wil je gewoon hallo zeggen? We horen graag van je! Via ons contactformulier kun je contact opnemen! Met vriendelijke groet, Het team van Boksen-Nederland.nl">
@@ -48,6 +49,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 </section>
 </div>
 </div></body></html>`} />
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap-narrow">
+      <h2 style="margin-bottom:1.2rem">Stuur ons een bericht</h2>
+      <ContactForm siteName="Boksen-Nederland.nl" />
     </div>
   </section>
 </BaseLayout>

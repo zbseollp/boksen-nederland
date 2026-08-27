@@ -1,0 +1,146 @@
+---
+interface Props {
+  siteName: string;
+  /** Onderwerpregel van de mail die Web3Forms verstuurt */
+  subject?: string;
+}
+
+const { siteName, subject = `Nieuw bericht via ${siteName}` } = Astro.props;
+
+// Web3Forms access keys horen in de client-side HTML te staan; ze zijn
+// publiek van opzet en geven geen toegang tot je account.
+const ACCESS_KEY = '281f477d-7744-407d-9b6a-9b8d9c6abe3c';
+---
+
+<form
+  class="form-card"
+  id="contact-form"
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  novalidate
+>
+  <input type="hidden" name="access_key" value={ACCESS_KEY} />
+  <input type="hidden" name="subject" value={subject} />
+  <input type="hidden" name="from_name" value={siteName} />
+
+  <!-- honeypot: bots vullen dit in, mensen zien het niet -->
+  <label class="form-hp" aria-hidden="true">
+    Laat dit veld leeg
+    <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" />
+  </label>
+
+  <div class="form-grid">
+    <div class="two-up">
+      <div class="field">
+        <label for="cf-name">Je naam <span class="req" aria-hidden="true">*</span></label>
+        <input
+          type="text"
+          id="cf-name"
+          name="name"
+          required
+          autocomplete="name"
+          placeholder="Voor- en achternaam"
+        />
+      </div>
+
+      <div class="field">
+        <label for="cf-email">Je e-mailadres <span class="req" aria-hidden="true">*</span></label>
+        <input
+          type="email"
+          id="cf-email"
+          name="email"
+          required
+          autocomplete="email"
+          placeholder="naam@voorbeeld.nl"
+        />
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="cf-subject">Onderwerp</label>
+      <input type="text" id="cf-subject" name="onderwerp" placeholder="Waar gaat je vraag over?" />
+    </div>
+
+    <div class="field">
+      <label for="cf-message">Je bericht <span class="req" aria-hidden="true">*</span></label>
+      <textarea
+        id="cf-message"
+        name="message"
+        required
+        placeholder="Stel hier je vraag of laat je opmerking achter."
+      ></textarea>
+    </div>
+
+    <div class="h-captcha" data-captcha="true"></div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn">Verstuur bericht</button>
+      <p class="form-note">Velden met * zijn verplicht.</p>
+    </div>
+  </div>
+
+  <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+</form>
+
+<script src="https://web3forms.com/client/script.js" async defer is:inline></script>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('#contact-form');
+  const status = document.querySelector<HTMLElement>('#cf-status');
+
+  function show(kind: 'ok' | 'err', msg: string) {
+    if (!status) return;
+    status.textContent = msg;
+    status.classList.remove('ok', 'err');
+    status.classList.add('show', kind);
+  }
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const btn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const original = btn?.textContent || 'Verstuur bericht';
+
+    const data = new FormData(form);
+    // hCaptcha is verplicht wanneer die op het formulier staat
+    if (form.querySelector('.h-captcha') && !data.get('h-captcha-response')) {
+      show('err', 'Bevestig eerst dat je geen robot bent.');
+      return;
+    }
+
+    if (btn) {
+      btn.disabled = true;
+      btn.textContent = 'Versturen…';
+    }
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: data,
+      });
+      const json = await res.json();
+
+      if (res.ok && json.success) {
+        show('ok', 'Bedankt! Je bericht is verstuurd. We nemen zo snel mogelijk contact met je op.');
+        form.reset();
+        // @ts-ignore - hCaptcha wordt door het Web3Forms-script geladen
+        window.hcaptcha?.reset?.();
+      } else {
+        show('err', json.message || 'Er ging iets mis bij het versturen. Probeer het later opnieuw.');
+      }
+    } catch {
+      show('err', 'Versturen is niet gelukt. Controleer je internetverbinding en probeer het opnieuw.');
+    } finally {
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = original;
+      }
+    }
+  });
+</script>

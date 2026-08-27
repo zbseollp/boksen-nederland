@@ -940,3 +940,91 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 3rem 1rem;
   color: var(--text-muted);
 }
+
+/* ============================ contactformulier ============================ */
+.form-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.4rem, 3vw, 2rem);
+  box-shadow: var(--shadow-sm);
+}
+.form-grid { display: grid; gap: 1.1rem; }
+@media (min-width: 620px) {
+  .form-grid .two-up { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+}
+.field { display: grid; gap: .4rem; }
+.field label {
+  font-family: var(--font-display);
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--text-strong);
+}
+.field .req { color: var(--red); }
+.field input,
+.field textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  padding: .7rem .9rem;
+  transition: border-color .18s var(--ease), box-shadow .18s var(--ease);
+}
+.field textarea { min-height: 150px; resize: vertical; }
+.field input::placeholder,
+.field textarea::placeholder { color: var(--text-faint); }
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px var(--red-soft);
+}
+.field input:user-invalid,
+.field textarea:user-invalid { border-color: #C2352B; }
+
+.form-hp {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: .3rem;
+}
+.form-note { color: var(--text-faint); font-size: .85rem; margin: 0; }
+.form-card .btn[disabled] { opacity: .6; cursor: not-allowed; transform: none; }
+
+.form-status {
+  margin-top: 1.1rem;
+  padding: .9rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-size: .95rem;
+  display: none;
+}
+.form-status.show { display: block; }
+.form-status.ok {
+  background: rgba(22, 128, 74, .1);
+  border: 1px solid rgba(22, 128, 74, .35);
+  color: #146c40;
+}
+.form-status.err {
+  background: rgba(194, 53, 43, .09);
+  border: 1px solid rgba(194, 53, 43, .32);
+  color: #a32b23;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .form-status.ok { color: #6ee7a8; }
+  :root:not([data-theme="light"]) .form-status.err { color: #ffa39c; }
+}
+.h-captcha { margin-top: .2rem; }
