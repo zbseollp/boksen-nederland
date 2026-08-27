@@ -1,13 +1,15 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostList from '../../components/PostList.astro';
+import { PAGE_SIZE } from '../../lib/pagination';
 
-const posts = (await getCollection('blog')).sort(
+const allPosts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
-const dateFmt = (d: Date) =>
-  new Intl.DateTimeFormat('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' }).format(d);
+const totalPages = Math.max(1, Math.ceil(allPosts.length / PAGE_SIZE));
+const posts = allPosts.slice(0, PAGE_SIZE);
 ---
 
 <BaseLayout
@@ -32,32 +34,14 @@ const dateFmt = (d: Date) =>
 
   <section class="section">
     <div class="wrap">
-      <div class="section-head">
-        <div>
-          <h2>Alle artikelen</h2>
-          <p>{posts.length} artikelen, nieuwste eerst.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-3">
-        {posts.map((post) => (
-          <article class="card">
-            {post.data.heroImage && (
-              <div class="card-media">
-                <img src={post.data.heroImage} alt="" loading="lazy" />
-              </div>
-            )}
-            <div class="card-body">
-              {post.data.categories?.[0] && <span class="tag">{post.data.categories[0]}</span>}
-              <h3 style="margin-top:.6rem"><a href={`/${post.id}/`}>{post.data.title}</a></h3>
-              <p>{post.data.description}</p>
-              <div class="meta">
-                <time datetime={post.data.pubDate.toISOString()}>{dateFmt(post.data.pubDate)}</time>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
+      <PostList
+        posts={posts}
+        allPosts={allPosts}
+        page={1}
+        totalPages={totalPages}
+        total={allPosts.length}
+        basePath="/nieuws"
+      />
     </div>
   </section>
 </BaseLayout>

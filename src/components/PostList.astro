@@ -1,0 +1,168 @@
+---
+interface Props {
+  posts: any[];      // artikelen op deze pagina
+  allPosts: any[];   // volledige lijst, alleen voor het zoekfilter
+  page: number;
+  totalPages: number;
+  total: number;
+  basePath?: string; // '/blog' of '/nieuws'
+}
+
+const {
+  posts,
+  allPosts,
+  page,
+  totalPages,
+  total,
+  basePath = '/nieuws',
+} = Astro.props;
+
+const dateFmt = (d: Date) =>
+  new Intl.DateTimeFormat('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' }).format(d);
+
+const href = (n: number) => (n === 1 ? `${basePath}/` : `${basePath}/page/${n}/`);
+
+// compacte index zodat het filter over álle artikelen zoekt, niet alleen deze pagina
+const index = allPosts.map((p) => ({
+  t: p.data.title,
+  d: p.data.description || '',
+  u: `/${p.id}/`,
+  s: p.data.pubDate.toISOString(),
+  i: p.data.heroImage || '',
+}));
+
+// venster van paginanummers rond de huidige pagina
+const window = 2;
+const nums: (number | '…')[] = [];
+for (let n = 1; n <= totalPages; n++) {
+  if (n === 1 || n === totalPages || Math.abs(n - page) <= window) {
+    nums.push(n);
+  } else if (nums[nums.length - 1] !== '…') {
+    nums.push('…');
+  }
+}
+---
+
+<div class="filter-bar" data-post-filter>
+  <label class="filter-input">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <circle cx="11" cy="11" r="7"></circle>
+      <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+    </svg>
+    <input type="search" placeholder="Zoek in alle artikelen…" aria-label="Zoek in alle artikelen" />
+  </label>
+  <span class="filter-count" data-count>
+    {totalPages > 1
+      ? `Pagina ${page} van ${totalPages} — ${total} artikelen`
+      : `${total} artikelen`}
+  </span>
+</div>
+
+<div class="grid grid-3" data-page-list>
+  {posts.map((post) => (
+    <article class="card">
+      {post.data.heroImage && (
+        <div class="card-media">
+          <img src={post.data.heroImage} alt="" loading="lazy" />
+        </div>
+      )}
+      <div class="card-body">
+        {post.data.categories?.[0] && <span class="tag">{post.data.categories[0]}</span>}
+        <h3 style="margin-top:.55rem"><a href={`/${post.id}/`}>{post.data.title}</a></h3>
+        <p>{post.data.description}</p>
+        <div class="meta">
+          <time datetime={post.data.pubDate.toISOString()}>{dateFmt(post.data.pubDate)}</time>
+        </div>
+      </div>
+    </article>
+  ))}
+</div>
+
+<!-- resultaten van het zoekfilter, over alle pagina's heen -->
+<div class="grid grid-3" data-search-list hidden></div>
+<p class="empty-state" data-empty hidden>Geen artikelen gevonden die aan je zoekopdracht voldoen.</p>
+
+{totalPages > 1 && (
+  <nav class="pager" data-pager aria-label="Paginering">
+    {page > 1 && <a href={href(page - 1)} rel="prev" aria-label="Vorige pagina">‹</a>}
+    {nums.map((n) =>
+      n === '…' ? (
+        <span aria-hidden="true">…</span>
+      ) : n === page ? (
+        <span class="current" aria-current="page">{n}</span>
+      ) : (
+        <a href={href(n)}>{n}</a>
+      )
+    )}
+    {page < totalPages && <a href={href(page + 1)} rel="next" aria-label="Volgende pagina">›</a>}
+  </nav>
+)}
+
+<script type="application/json" data-post-index set:html={JSON.stringify(index)} />
+
+<script>
+  type Item = { t: string; d: string; u: string; s: string; i: string };
+
+  const bar = document.querySelector<HTMLElement>('[data-post-filter]');
+  const raw = document.querySelector<HTMLElement>('[data-post-index]');
+
+  if (bar && raw) {
+    const input = bar.querySelector<HTMLInputElement>('input');
+    const countEl = bar.querySelector<HTMLElement>('[data-count]');
+    const pageList = document.querySelector<HTMLElement>('[data-page-list]');
+    const searchList = document.querySelector<HTMLElement>('[data-search-list]');
+    const empty = document.querySelector<HTMLElement>('[data-empty]');
+    const pager = document.querySelector<HTMLElement>('[data-pager]');
+
+    const items: Item[] = JSON.parse(raw.textContent || '[]');
+    const baseCount = countEl?.textContent || '';
+
+    const fmt = new Intl.DateTimeFormat('nl-NL', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    });
+
+    const esc = (s: string) =>
+      s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
+
+    function card(it: Item) {
+      const media = it.i
+        ? `<div class="card-media"><img src="${esc(it.i)}" alt="" loading="lazy"></div>`
+        : '';
+      return `<article class="card">${media}<div class="card-body">
+        <h3><a href="${esc(it.u)}">${esc(it.t)}</a></h3>
+        <p>${esc(it.d)}</p>
+        <div class="meta"><time datetime="${it.s}">${fmt.format(new Date(it.s))}</time></div>
+      </div></article>`;
+    }
+
+    function reset() {
+      if (pageList) pageList.hidden = false;
+      if (searchList) { searchList.hidden = true; searchList.innerHTML = ''; }
+      if (pager) pager.hidden = false;
+      if (empty) empty.hidden = true;
+      if (countEl) countEl.textContent = baseCount;
+    }
+
+    input?.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase();
+      if (!q) return reset();
+
+      const hits = items.filter(
+        (it) => it.t.toLowerCase().includes(q) || it.d.toLowerCase().includes(q)
+      );
+
+      if (pageList) pageList.hidden = true;
+      if (pager) pager.hidden = true;
+      if (searchList) {
+        searchList.innerHTML = hits.map(card).join('');
+        searchList.hidden = hits.length === 0;
+      }
+      if (empty) empty.hidden = hits.length !== 0;
+      if (countEl) {
+        countEl.textContent = `${hits.length} van ${items.length} artikelen`;
+      }
+    });
+  }
+</script>
