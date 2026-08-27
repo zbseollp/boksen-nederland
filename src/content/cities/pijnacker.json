@@ -1,0 +1,21 @@
+{
+ "title": "Boksscholen in Pijnacker",
+ "city": "Pijnacker",
+ "metaTitle": "Boksen sportscholen in Pijnacker",
+ "metaDesc": "Op zoek naar boksen in Pijnacker? Bekijk hier de beste boksscholen in Pijnacker!",
+ "intro": "Ben jij op zoek naar een boksschool in Pijnacker? Dan ben je hier aan het juiste adres! In Pijnacker kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Pijnacker overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Lion Gym",
+   "href": "/lion-gym/"
+  },
+  {
+   "name": "Sportcentrum Pijnacker",
+   "href": "/sportcentrum-pijnacker/"
+  },
+  {
+   "name": "Sportinstituut Pijnacker",
+   "href": "/sportinstituut-pijnacker/"
+  }
+ ]
+}

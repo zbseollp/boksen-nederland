@@ -1,0 +1,41 @@
+{
+ "title": "Boksscholen in Hoofddorp",
+ "city": "Hoofddorp",
+ "metaTitle": "Boksen sportscholen in Hoofddorp",
+ "metaDesc": "Op zoek naar boksen in Hoofddorp? Bekijk hier de beste boksscholen in Hoofddorp!",
+ "intro": "Ben jij op zoek naar een boksschool in Hoofddorp? Dan ben je hier aan het juiste adres! In Hoofddorp kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Hoofddorp overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Body Reinforcement",
+   "href": "/body-reinforcement/"
+  },
+  {
+   "name": "Club Kops",
+   "href": "/club-kops/"
+  },
+  {
+   "name": "GYM Hoofddorp",
+   "href": "/gym-hoofddorp/"
+  },
+  {
+   "name": "Gym Minang",
+   "href": "/gym-minang/"
+  },
+  {
+   "name": "Monster Fabriek gym",
+   "href": "/monster-fabriek-gym/"
+  },
+  {
+   "name": "Pencak Silat",
+   "href": "/pencak-silat/"
+  },
+  {
+   "name": "RawBoxing",
+   "href": "/rawboxing/"
+  },
+  {
+   "name": "Satria Muda Indonesia",
+   "href": "/satria-muda-indonesia/"
+  }
+ ]
+}

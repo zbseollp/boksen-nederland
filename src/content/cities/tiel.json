@@ -1,0 +1,25 @@
+{
+ "title": "Boksscholen in Tiel",
+ "city": "Tiel",
+ "metaTitle": "Boksen sportscholen in Tiel",
+ "metaDesc": "Op zoek naar boksen in Tiel? Bekijk hier de beste boksscholen in Tiel!",
+ "intro": "Ben jij op zoek naar een boksschool in Tiel? Dan ben je hier aan het juiste adres! In Tiel kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Tiel overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Besseling Training",
+   "href": "/besseling-training/"
+  },
+  {
+   "name": "Cosyclub Juliën",
+   "href": "/cosyclub-julien/"
+  },
+  {
+   "name": "Krav Maga Tiel, IKMN",
+   "href": "/krav-maga-tiel-ikmn/"
+  },
+  {
+   "name": "Sportschool Bushido",
+   "href": "/sportschool-bushido/"
+  }
+ ]
+}

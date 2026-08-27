@@ -1,0 +1,74 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+const boxers = (await getCollection('boxers')).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title, 'nl')
+);
+const cities = (await getCollection('cities')).sort((a, b) =>
+  a.data.city.localeCompare(b.data.city, 'nl')
+);
+const gyms = await getCollection('gyms');
+
+const pages = [
+  { href: '/', label: 'Home' },
+  { href: '/scholen/', label: 'Boksscholen in Nederland' },
+  { href: '/boksers/', label: 'Boksers' },
+  { href: '/boksen/', label: 'Boksen' },
+  { href: '/nieuws/', label: 'Nieuws' },
+  { href: '/over-ons/', label: 'Over ons' },
+  { href: '/contact/', label: 'Contact' },
+  { href: '/privacyverklaring/', label: 'Privacyverklaring' },
+  { href: '/algemene-voorwaarden/', label: 'Algemene voorwaarden' },
+];
+---
+
+<BaseLayout
+  title="Sitemap — Boksen-Nederland.nl"
+  description="Een overzicht van alle pagina's, boksscholen, boksers en artikelen op Boksen-Nederland.nl."
+>
+  <section class="hero">
+    <div class="wrap lead">
+      <h1>Sitemap</h1>
+      <p>
+        Een overzicht van alle pagina&rsquo;s op deze website:
+        {gyms.length.toLocaleString('nl-NL')} sportscholen in
+        {cities.length.toLocaleString('nl-NL')} plaatsen,
+        {boxers.length} boksers en {posts.length} artikelen.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="prose" style="max-width:none">
+        <h2>Pagina&rsquo;s</h2>
+        <ul>
+          {pages.map((p) => <li><a href={p.href}>{p.label}</a></li>)}
+        </ul>
+
+        <h2>Plaatsen ({cities.length})</h2>
+        <ul class="col-list">
+          {cities.map((c) => (
+            <li><a href={`/scholen/${c.id}/`}>{c.data.city}</a></li>
+          ))}
+        </ul>
+
+        <h2>Boksers ({boxers.length})</h2>
+        <ul class="col-list">
+          {boxers.map((b) => (
+            <li><a href={`/${b.id}/`}>{b.data.title}</a></li>
+          ))}
+        </ul>
+
+        <h2>Artikelen ({posts.length})</h2>
+        <ul>
+          {posts.map((p) => <li><a href={`/${p.id}/`}>{p.data.title}</a></li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

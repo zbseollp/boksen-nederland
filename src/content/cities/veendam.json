@@ -1,0 +1,29 @@
+{
+ "title": "Boksscholen in Veendam",
+ "city": "Veendam",
+ "metaTitle": "Boksen sportscholen in Veendam",
+ "metaDesc": "Op zoek naar boksen in Veendam? Bekijk hier de beste boksscholen in Veendam!",
+ "intro": "Ben jij op zoek naar een boksschool in Veendam? Dan ben je hier aan het juiste adres! In Veendam kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Veendam overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "E10 Training",
+   "href": "/e10-training/"
+  },
+  {
+   "name": "Fit Factory Borgerswold",
+   "href": "/fit-factory-borgerswold/"
+  },
+  {
+   "name": "Oxygym",
+   "href": "/oxygym/"
+  },
+  {
+   "name": "Private Gym Paulo Boer",
+   "href": "/private-gym-paulo-boer/"
+  },
+  {
+   "name": "Vechtsport en Sportschool Veendam",
+   "href": "/vechtsport-en-sportschool-veendam/"
+  }
+ ]
+}

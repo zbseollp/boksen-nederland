@@ -1,0 +1,25 @@
+{
+ "title": "Boksscholen in Vught",
+ "city": "Vught",
+ "metaTitle": "Boksen sportscholen in Vught",
+ "metaDesc": "Op zoek naar boksen in Vught? Bekijk hier de beste boksscholen in Vught!",
+ "intro": "Ben jij op zoek naar een boksschool in Vught? Dan ben je hier aan het juiste adres! In Vught kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Vught overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "BOKS!",
+   "href": "/boks-/"
+  },
+  {
+   "name": "Boksvereniging De Counter",
+   "href": "/boksvereniging-de-counter/"
+  },
+  {
+   "name": "Reset Training Company",
+   "href": "/reset-training-company/"
+  },
+  {
+   "name": "WORKHOUSE strength & conditioning",
+   "href": "/workhouse-strength-conditioning/"
+  }
+ ]
+}

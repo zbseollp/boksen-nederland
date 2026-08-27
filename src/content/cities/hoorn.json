@@ -1,0 +1,33 @@
+{
+ "title": "Boksscholen in Hoorn",
+ "city": "Hoorn",
+ "metaTitle": "Boksen sportscholen in Hoorn",
+ "metaDesc": "Op zoek naar boksen in Hoorn? Bekijk hier de beste boksscholen in Hoorn!",
+ "intro": "Ben jij op zoek naar een boksschool in Hoorn? Dan ben je hier aan het juiste adres! In Hoorn kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Hoorn overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Hoornsport",
+   "href": "/hoornsport/"
+  },
+  {
+   "name": "Proximal Zone",
+   "href": "/proximal-zone/"
+  },
+  {
+   "name": "Sokudo-Gym",
+   "href": "/sokudo-gym/"
+  },
+  {
+   "name": "Sport met Sarah",
+   "href": "/sport-met-sarah/"
+  },
+  {
+   "name": "SportCity Hoorn",
+   "href": "/sportcity-hoorn/"
+  },
+  {
+   "name": "Sportcentrum Hoorn",
+   "href": "/sportcentrum-hoorn/"
+  }
+ ]
+}

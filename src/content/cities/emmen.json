@@ -1,0 +1,49 @@
+{
+ "title": "Boksscholen in Emmen",
+ "city": "Emmen",
+ "metaTitle": "Boksen sportscholen in Emmen",
+ "metaDesc": "Op zoek naar boksen in Emmen? Bekijk hier de beste boksscholen in Emmen!",
+ "intro": "Ben jij op zoek naar een boksschool in Emmen? Dan ben je hier aan het juiste adres! In Emmen kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Emmen overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Beresterk Coaching",
+   "href": "/beresterk-coaching/"
+  },
+  {
+   "name": "Boksend Ontwikkelen",
+   "href": "/boksend-ontwikkelen/"
+  },
+  {
+   "name": "Boksvereniging Emmen",
+   "href": "/boksvereniging-emmen/"
+  },
+  {
+   "name": "Bootcamp Drenthe",
+   "href": "/bootcamp-drenthe/"
+  },
+  {
+   "name": "Fit met Laura",
+   "href": "/fit-met-laura/"
+  },
+  {
+   "name": "Garuda Gym",
+   "href": "/garuda-gym/"
+  },
+  {
+   "name": "Hobers THAI-BOXING",
+   "href": "/hobers-thai-boxing/"
+  },
+  {
+   "name": "Kickboxing Vereniging Muay-Thai",
+   "href": "/kickboxing-vereniging-muay-thai/"
+  },
+  {
+   "name": "Mejiro Gym Drenthe",
+   "href": "/mejiro-gym-drenthe/"
+  },
+  {
+   "name": "Personal Fit Box",
+   "href": "/personal-fit-box/"
+  }
+ ]
+}

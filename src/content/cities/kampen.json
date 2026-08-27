@@ -1,0 +1,21 @@
+{
+ "title": "Boksscholen in Kampen",
+ "city": "Kampen",
+ "metaTitle": "Boksen sportscholen in Kampen",
+ "metaDesc": "Op zoek naar boksen in Kampen? Bekijk hier de beste boksscholen in Kampen!",
+ "intro": "Ben jij op zoek naar een boksschool in Kampen? Dan ben je hier aan het juiste adres! In Kampen kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Kampen overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Denge Sport Kampen",
+   "href": "/denge-sport-kampen/"
+  },
+  {
+   "name": "Leef Centrum voor sport en ontspanning",
+   "href": "/leef-centrum-voor-sport-en-ontspanning/"
+  },
+  {
+   "name": "SFC Kampen",
+   "href": "/sfc-kampen/"
+  }
+ ]
+}

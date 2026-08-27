@@ -1,0 +1,42 @@
+---
+const { pathname } = Astro.url;
+const nav = [
+  { href: "/scholen/", label: "Scholen" },
+  { href: "/boksers/", label: "Boksers" },
+  { href: "/boksen/", label: "Boksen" },
+  { href: "/nieuws/", label: "Nieuws" },
+  { href: "/contact/", label: "Contact" },
+];
+const isCurrent = (href: string) => pathname === href || pathname.startsWith(href);
+---
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Boksen-Nederland.nl — naar de homepage">
+      <img src="/logo.svg" alt="Boksen-Nederland.nl" height="34" />
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu openen">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="7" x2="21" y2="7"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="17" x2="21" y2="17"></line>
+      </svg>
+    </button>
+
+    <nav class="nav" id="site-nav">
+      {nav.map((item) => (
+        <a href={item.href} aria-current={isCurrent(item.href) ? "page" : undefined}>{item.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>(".nav-toggle");
+  const nav = document.querySelector<HTMLElement>("#site-nav");
+  toggle?.addEventListener("click", () => {
+    const open = nav?.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+</script>

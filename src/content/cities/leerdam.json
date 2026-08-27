@@ -1,0 +1,25 @@
+{
+ "title": "Boksscholen in Leerdam",
+ "city": "Leerdam",
+ "metaTitle": "Boksen sportscholen in Leerdam",
+ "metaDesc": "Op zoek naar boksen in Leerdam? Bekijk hier de beste boksscholen in Leerdam!",
+ "intro": "Ben jij op zoek naar een boksschool in Leerdam? Dan ben je hier aan het juiste adres! In Leerdam kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Leerdam overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "CrossFit Leerdam",
+   "href": "/crossfit-leerdam/"
+  },
+  {
+   "name": "Family Fit Muslu",
+   "href": "/family-fit-muslu/"
+  },
+  {
+   "name": "Puur Sport",
+   "href": "/puur-sport/"
+  },
+  {
+   "name": "TheBox Leerdam",
+   "href": "/thebox-leerdam/"
+  }
+ ]
+}

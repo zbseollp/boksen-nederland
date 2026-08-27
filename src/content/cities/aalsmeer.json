@@ -1,0 +1,21 @@
+{
+ "title": "Boksscholen in Aalsmeer",
+ "city": "Aalsmeer",
+ "metaTitle": "Boksen sportscholen in Aalsmeer",
+ "metaDesc": "Op zoek naar boksen in Aalsmeer? Bekijk hier de beste boksscholen in Aalsmeer!",
+ "intro": "Ben jij op zoek naar een boksschool in Aalsmeer? Dan ben je hier aan het juiste adres! In Aalsmeer kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Aalsmeer overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Fitness Aalsmeer",
+   "href": "/fitness-aalsmeer/"
+  },
+  {
+   "name": "Fitter Future",
+   "href": "/fitter-future/"
+  },
+  {
+   "name": "Fitz Gym",
+   "href": "/fitz-gym/"
+  }
+ ]
+}

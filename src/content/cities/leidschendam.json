@@ -1,0 +1,29 @@
+{
+ "title": "Boksscholen in Leidschendam",
+ "city": "Leidschendam",
+ "metaTitle": "Boksen sportscholen in Leidschendam",
+ "metaDesc": "Op zoek naar boksen in Leidschendam? Bekijk hier de beste boksscholen in Leidschendam!",
+ "intro": "Ben jij op zoek naar een boksschool in Leidschendam? Dan ben je hier aan het juiste adres! In Leidschendam kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Leidschendam overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Bodytec Leidschendam",
+   "href": "/bodytec-leidschendam/"
+  },
+  {
+   "name": "Bruut Personal Boxing",
+   "href": "/bruut-personal-boxing/"
+  },
+  {
+   "name": "Kracht & Zelfvertrouwen",
+   "href": "/kracht-zelfvertrouwen/"
+  },
+  {
+   "name": "LV-Boxing",
+   "href": "/lv-boxing/"
+  },
+  {
+   "name": "Team Moody",
+   "href": "/team-moody/"
+  }
+ ]
+}

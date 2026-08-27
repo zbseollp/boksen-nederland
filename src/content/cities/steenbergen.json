@@ -1,0 +1,25 @@
+{
+ "title": "Boksscholen in Steenbergen",
+ "city": "Steenbergen",
+ "metaTitle": "Boksen sportscholen in Steenbergen",
+ "metaDesc": "Op zoek naar boksen in Steenbergen? Bekijk hier de beste boksscholen in Steenbergen!",
+ "intro": "Ben jij op zoek naar een boksschool in Steenbergen? Dan ben je hier aan het juiste adres! In Steenbergen kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Steenbergen overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "De Knotwilg",
+   "href": "/de-knotwilg/"
+  },
+  {
+   "name": "Dinami Sports & Fitness",
+   "href": "/dinami-sports-fitness/"
+  },
+  {
+   "name": "LeefVitaal.nu",
+   "href": "/leefvitaal-nu/"
+  },
+  {
+   "name": "Luuk Elzinga",
+   "href": "/luuk-elzinga/"
+  }
+ ]
+}

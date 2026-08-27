@@ -1,0 +1,33 @@
+{
+ "title": "Boksscholen in Hoogeveen",
+ "city": "Hoogeveen",
+ "metaTitle": "Boksen sportscholen in Hoogeveen",
+ "metaDesc": "Op zoek naar boksen in Hoogeveen? Bekijk hier de beste boksscholen in Hoogeveen!",
+ "intro": "Ben jij op zoek naar een boksschool in Hoogeveen? Dan ben je hier aan het juiste adres! In Hoogeveen kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Hoogeveen overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Afslank- en fitnessclub",
+   "href": "/afslank-en-fitnessclub/"
+  },
+  {
+   "name": "Fight Academy",
+   "href": "/fight-academy/"
+  },
+  {
+   "name": "Fight With Faith Hoogeveen",
+   "href": "/fight-with-faith-hoogeveen/"
+  },
+  {
+   "name": "Mindboxing",
+   "href": "/mindboxing/"
+  },
+  {
+   "name": "Sportpaleis Hoogeveen",
+   "href": "/sportpaleis-hoogeveen/"
+  },
+  {
+   "name": "just chill",
+   "href": "/just-chill/"
+  }
+ ]
+}

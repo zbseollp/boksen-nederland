@@ -1,0 +1,29 @@
+{
+ "title": "Boksscholen in Eersel",
+ "city": "Eersel",
+ "metaTitle": "Boksen sportscholen in Eersel",
+ "metaDesc": "Op zoek naar boksen in Eersel? Bekijk hier de beste boksscholen in Eersel!",
+ "intro": "Ben jij op zoek naar een boksschool in Eersel? Dan ben je hier aan het juiste adres! In Eersel kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Eersel overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Budoschool Ippon",
+   "href": "/budoschool-ippon/"
+  },
+  {
+   "name": "Collective Sports",
+   "href": "/collective-sports/"
+  },
+  {
+   "name": "Evolution Personal training & more",
+   "href": "/evolution-personal-training-more/"
+  },
+  {
+   "name": "Fit Factory Eersel",
+   "href": "/fit-factory-eersel/"
+  },
+  {
+   "name": "Topfitt",
+   "href": "/topfitt/"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "title": "Boksscholen in Nijkerk",
+ "city": "Nijkerk",
+ "metaTitle": "Boksen sportscholen in Nijkerk",
+ "metaDesc": "Op zoek naar boksen in Nijkerk? Bekijk hier de beste boksscholen in Nijkerk!",
+ "intro": "Ben jij op zoek naar een boksschool in Nijkerk? Dan ben je hier aan het juiste adres! In Nijkerk kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Nijkerk overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "De FitFabriek",
+   "href": "/de-fitfabriek/"
+  },
+  {
+   "name": "JOEY'S Judoschool",
+   "href": "/joey-s-judoschool/"
+  },
+  {
+   "name": "Muay Thai",
+   "href": "/muay-thai/"
+  },
+  {
+   "name": "Nautilus Health Club",
+   "href": "/nautilus-health-club/"
+  },
+  {
+   "name": "Semaja's Gym",
+   "href": "/semaja-s-gym/"
+  }
+ ]
+}

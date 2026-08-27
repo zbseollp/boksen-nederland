@@ -1,0 +1,45 @@
+{
+ "title": "GYM Hoofddorp",
+ "city": "Hoofddorp",
+ "citySlug": "hoofddorp",
+ "website": "http://www.gymhoofddorp.nl/",
+ "phone": "+31 23 557 8359",
+ "address": "Hoofddorp, Daalmeerstraat 3",
+ "lastUpdated": "25-01-2024",
+ "intro": "GYM Hoofddorp is een sportschool in Hoofddorp waar je boksen kunt beoefenen. Op Boksen-Nederland.nl proberen wij actuele informatie over GYM Hoofddorp te verzamelen. Ben jij op zoek naar een proefles boksen in Hoofddorp? Neem dan contact op met GYM Hoofddorp of bekijk andere sportscholen waar je boksen kunt beoefenen in Hoofddorp.",
+ "schedule": "Bekijk hieronder de GYM Hoofddorp trainingstijden: De trainingstijden zijn onbekend. Bent u de eigenaar van deze sportschool en wilt u de trainingstijden toevoegen? Neem dan contact met ons op!",
+ "costs": "De contributie voor een abonnement bij GYM Hoofddorp is ons niet bekend. Neem contact op met de sportschool voor uitgebreide informatie met betrekking tot abonnementen.",
+ "locationNote": "Bekijk hieronder de locatie van GYM Hoofddorp in Hoofddorp op de kaart: Unknown",
+ "metaTitle": "GYM Hoofddorp - Boksen bij GYM Hoofddorp",
+ "metaDesc": "GYM Hoofddorp is een sportschool in Hoofddorp waar je kunt boksen. Bekijk hier meer info over de locatie!",
+ "nearby": [
+  {
+   "name": "Body Reinforcement",
+   "href": "/body-reinforcement/"
+  },
+  {
+   "name": "Club Kops",
+   "href": "/club-kops/"
+  },
+  {
+   "name": "Gym Minang",
+   "href": "/gym-minang/"
+  },
+  {
+   "name": "Monster Fabriek gym",
+   "href": "/monster-fabriek-gym/"
+  },
+  {
+   "name": "Pencak Silat",
+   "href": "/pencak-silat/"
+  },
+  {
+   "name": "RawBoxing",
+   "href": "/rawboxing/"
+  },
+  {
+   "name": "Satria Muda Indonesia",
+   "href": "/satria-muda-indonesia/"
+  }
+ ]
+}

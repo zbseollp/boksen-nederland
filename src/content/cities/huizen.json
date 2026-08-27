@@ -1,0 +1,25 @@
+{
+ "title": "Boksscholen in Huizen",
+ "city": "Huizen",
+ "metaTitle": "Boksen sportscholen in Huizen",
+ "metaDesc": "Op zoek naar boksen in Huizen? Bekijk hier de beste boksscholen in Huizen!",
+ "intro": "Ben jij op zoek naar een boksschool in Huizen? Dan ben je hier aan het juiste adres! In Huizen kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Huizen overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "BVK Sports",
+   "href": "/bvk-sports/"
+  },
+  {
+   "name": "Fight Club Huizen",
+   "href": "/fight-club-huizen/"
+  },
+  {
+   "name": "Hejena Gym",
+   "href": "/hejena-gym/"
+  },
+  {
+   "name": "ParkinsonSport.nl",
+   "href": "/parkinsonsport-nl/"
+  }
+ ]
+}

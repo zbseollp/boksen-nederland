@@ -1,0 +1,21 @@
+{
+ "title": "Boksscholen in Schoonhoven",
+ "city": "Schoonhoven",
+ "metaTitle": "Boksen sportscholen in Schoonhoven",
+ "metaDesc": "Op zoek naar boksen in Schoonhoven? Bekijk hier de beste boksscholen in Schoonhoven!",
+ "intro": "Ben jij op zoek naar een boksschool in Schoonhoven? Dan ben je hier aan het juiste adres! In Schoonhoven kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Schoonhoven overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Boxing fit point",
+   "href": "/boxing-fit-point/"
+  },
+  {
+   "name": "Five-Star Gym",
+   "href": "/five-star-gym/"
+  },
+  {
+   "name": "Kerroum Kickboxing",
+   "href": "/kerroum-kickboxing/"
+  }
+ ]
+}

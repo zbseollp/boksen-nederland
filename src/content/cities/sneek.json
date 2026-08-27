@@ -1,0 +1,45 @@
+{
+ "title": "Boksscholen in Sneek",
+ "city": "Sneek",
+ "metaTitle": "Boksen sportscholen in Sneek",
+ "metaDesc": "Op zoek naar boksen in Sneek? Bekijk hier de beste boksscholen in Sneek!",
+ "intro": "Ben jij op zoek naar een boksschool in Sneek? Dan ben je hier aan het juiste adres! In Sneek kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Sneek overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "AWRF/Gym De Leeuw",
+   "href": "/awrf-gym-de-leeuw/"
+  },
+  {
+   "name": "Boksvereniging Olympia",
+   "href": "/boksvereniging-olympia/"
+  },
+  {
+   "name": "bakkerboxing",
+   "href": "/bakkerboxing/"
+  },
+  {
+   "name": "Fitness Health Club Sneek",
+   "href": "/fitness-health-club-sneek/"
+  },
+  {
+   "name": "Kickboxing Sneek",
+   "href": "/kickboxing-sneek/"
+  },
+  {
+   "name": "NeRo's Gym",
+   "href": "/nero-s-gym/"
+  },
+  {
+   "name": "Sportcentrum Life Style",
+   "href": "/sportcentrum-life-style/"
+  },
+  {
+   "name": "Sportcentrum Prim",
+   "href": "/sportcentrum-prim/"
+  },
+  {
+   "name": "Sportclub F en F The Inner Way",
+   "href": "/sportclub-f-en-f-the-inner-way/"
+  }
+ ]
+}

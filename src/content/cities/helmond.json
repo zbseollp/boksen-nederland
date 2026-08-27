@@ -1,0 +1,37 @@
+{
+ "title": "Boksscholen in Helmond",
+ "city": "Helmond",
+ "metaTitle": "Boksen sportscholen in Helmond",
+ "metaDesc": "Op zoek naar boksen in Helmond? Bekijk hier de beste boksscholen in Helmond!",
+ "intro": "Ben jij op zoek naar een boksschool in Helmond? Dan ben je hier aan het juiste adres! In Helmond kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Helmond overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "CSA Helmond",
+   "href": "/csa-helmond/"
+  },
+  {
+   "name": "CrossFit Helmond",
+   "href": "/crossfit-helmond/"
+  },
+  {
+   "name": "GymBokx",
+   "href": "/gymbokx/"
+  },
+  {
+   "name": "Mansouri Gym",
+   "href": "/mansouri-gym/"
+  },
+  {
+   "name": "Martial Arts Centrum Helmond",
+   "href": "/martial-arts-centrum-helmond/"
+  },
+  {
+   "name": "Powerhouse Helmond",
+   "href": "/powerhouse-helmond/"
+  },
+  {
+   "name": "Team Holzken & Helmondse Amateur",
+   "href": "/team-holzken-helmondse-amateur/"
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "title": "Boksscholen in Hellevoetsluis",
+ "city": "Hellevoetsluis",
+ "metaTitle": "Boksen sportscholen in Hellevoetsluis",
+ "metaDesc": "Op zoek naar boksen in Hellevoetsluis? Bekijk hier de beste boksscholen in Hellevoetsluis!",
+ "intro": "Ben jij op zoek naar een boksschool in Hellevoetsluis? Dan ben je hier aan het juiste adres! In Hellevoetsluis kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Hellevoetsluis overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Active Body Condition",
+   "href": "/active-body-condition/"
+  },
+  {
+   "name": "Boca Sports",
+   "href": "/boca-sports/"
+  },
+  {
+   "name": "Kimé Sports",
+   "href": "/kime-sports/"
+  },
+  {
+   "name": "Sportcentrum Kooistee",
+   "href": "/sportcentrum-kooistee/"
+  },
+  {
+   "name": "VDP Personal Training",
+   "href": "/vdp-personal-training/"
+  },
+  {
+   "name": "VIP Fitboutique",
+   "href": "/vip-fitboutique/"
+  }
+ ]
+}

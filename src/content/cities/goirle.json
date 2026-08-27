@@ -1,0 +1,29 @@
+{
+ "title": "Boksscholen in Goirle",
+ "city": "Goirle",
+ "metaTitle": "Boksen sportscholen in Goirle",
+ "metaDesc": "Op zoek naar boksen in Goirle? Bekijk hier de beste boksscholen in Goirle!",
+ "intro": "Ben jij op zoek naar een boksschool in Goirle? Dan ben je hier aan het juiste adres! In Goirle kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Goirle overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Club Pellikaan Goirle",
+   "href": "/club-pellikaan-goirle/"
+  },
+  {
+   "name": "Fit-bokx",
+   "href": "/fit-bokx/"
+  },
+  {
+   "name": "Sportcentrum Jan de Rooy",
+   "href": "/sportcentrum-jan-de-rooy/"
+  },
+  {
+   "name": "Sportschool Bruers",
+   "href": "/sportschool-bruers/"
+  },
+  {
+   "name": "Workoutdoor Startpunt",
+   "href": "/workoutdoor-startpunt/"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "title": "Fight Studio",
+ "city": "Goes",
+ "citySlug": "goes",
+ "address": "+",
+ "lastUpdated": "25-01-2024",
+ "intro": "Fight Studio is een sportschool in Goes waar je boksen kunt beoefenen. Op Boksen-Nederland.nl proberen wij actuele informatie over Fight Studio te verzamelen. Ben jij op zoek naar een proefles boksen in Goes? Neem dan contact op met Fight Studio of bekijk andere sportscholen waar je boksen kunt beoefenen in Goes.",
+ "schedule": "Bekijk hieronder de Fight Studio trainingstijden: De trainingstijden zijn onbekend. Bent u de eigenaar van deze sportschool en wilt u de trainingstijden toevoegen? Neem dan contact met ons op!",
+ "costs": "De contributie voor een abonnement bij Fight Studio is ons niet bekend. Neem contact op met de sportschool voor uitgebreide informatie met betrekking tot abonnementen.",
+ "locationNote": "Bekijk hieronder de locatie van Fight Studio in Goes op de kaart: Unknown",
+ "metaTitle": "Fight Studio - Boksen bij Fight Studio",
+ "metaDesc": "Fight Studio is een sportschool in Goes waar je kunt boksen. Bekijk hier meer info over de locatie!",
+ "nearby": [
+  {
+   "name": "BoxinggoeS",
+   "href": "/boxinggoes/"
+  },
+  {
+   "name": "De Lifestijlkamer",
+   "href": "/de-lifestijlkamer/"
+  },
+  {
+   "name": "Innovate Personal Training",
+   "href": "/innovate-personal-training/"
+  },
+  {
+   "name": "Personal Training Zeeland",
+   "href": "/personal-training-zeeland/"
+  }
+ ]
+}

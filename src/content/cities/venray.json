@@ -1,0 +1,29 @@
+{
+ "title": "Boksscholen in Venray",
+ "city": "Venray",
+ "metaTitle": "Boksen sportscholen in Venray",
+ "metaDesc": "Op zoek naar boksen in Venray? Bekijk hier de beste boksscholen in Venray!",
+ "intro": "Ben jij op zoek naar een boksschool in Venray? Dan ben je hier aan het juiste adres! In Venray kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Venray overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Boksclub Venray",
+   "href": "/boksclub-venray/"
+  },
+  {
+   "name": "Fightersheart",
+   "href": "/fightersheart/"
+  },
+  {
+   "name": "FitFight Kickboksen",
+   "href": "/fitfight-kickboksen/"
+  },
+  {
+   "name": "LB FITNESS",
+   "href": "/lb-fitness/"
+  },
+  {
+   "name": "Thai-Kickboks",
+   "href": "/thai-kickboks/"
+  }
+ ]
+}

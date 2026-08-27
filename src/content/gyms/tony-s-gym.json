@@ -1,0 +1,49 @@
+{
+ "title": "Tony's Gym",
+ "city": "Almelo",
+ "citySlug": "almelo",
+ "website": "http://www.tonysgym.nl/",
+ "phone": "+31 85 130 0763",
+ "address": "Almelo, Voltastraat 1a",
+ "lastUpdated": "25-01-2024",
+ "intro": "Tony's Gym is een sportschool in Almelo waar je boksen kunt beoefenen. Op Boksen-Nederland.nl proberen wij actuele informatie over Tony's Gym te verzamelen. Ben jij op zoek naar een proefles boksen in Almelo? Neem dan contact op met Tony's Gym of bekijk andere sportscholen waar je boksen kunt beoefenen in Almelo.",
+ "schedule": "Bekijk hieronder de Tony's Gym trainingstijden: De trainingstijden zijn onbekend. Bent u de eigenaar van deze sportschool en wilt u de trainingstijden toevoegen? Neem dan contact met ons op!",
+ "costs": "De contributie voor een abonnement bij Tony's Gym is ons niet bekend. Neem contact op met de sportschool voor uitgebreide informatie met betrekking tot abonnementen.",
+ "locationNote": "Bekijk hieronder de locatie van Tony's Gym in Almelo op de kaart: Unknown",
+ "metaTitle": "Tony's Gym - Boksen bij Tony's Gym",
+ "metaDesc": "Tony's Gym is een sportschool in Almelo waar je kunt boksen. Bekijk hier meer info over de locatie!",
+ "nearby": [
+  {
+   "name": "FITT Functional Training",
+   "href": "/fitt-functional-training/"
+  },
+  {
+   "name": "Fight Academy Almelo",
+   "href": "/fight-academy-almelo/"
+  },
+  {
+   "name": "Gideon’s Gym",
+   "href": "/gideon-s-gym/"
+  },
+  {
+   "name": "Personal Boxing",
+   "href": "/personal-boxing/"
+  },
+  {
+   "name": "Personal Training Almelo",
+   "href": "/personal-training-almelo/"
+  },
+  {
+   "name": "Scorpio Gym",
+   "href": "/scorpio-gym/"
+  },
+  {
+   "name": "The Boxing Club Almelo",
+   "href": "/the-boxing-club-almelo/"
+  },
+  {
+   "name": "your personal skills",
+   "href": "/your-personal-skills/"
+  }
+ ]
+}

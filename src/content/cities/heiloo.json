@@ -1,0 +1,29 @@
+{
+ "title": "Boksscholen in Heiloo",
+ "city": "Heiloo",
+ "metaTitle": "Boksen sportscholen in Heiloo",
+ "metaDesc": "Op zoek naar boksen in Heiloo? Bekijk hier de beste boksscholen in Heiloo!",
+ "intro": "Ben jij op zoek naar een boksschool in Heiloo? Dan ben je hier aan het juiste adres! In Heiloo kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Heiloo overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Dorssports",
+   "href": "/dorssports/"
+  },
+  {
+   "name": "Fitnesscentrum Heiloo",
+   "href": "/fitnesscentrum-heiloo/"
+  },
+  {
+   "name": "Heiloo Vitaal",
+   "href": "/heiloo-vitaal/"
+  },
+  {
+   "name": "Palestra Sports Heiloo",
+   "href": "/palestra-sports-heiloo/"
+  },
+  {
+   "name": "Personal Fit Program",
+   "href": "/personal-fit-program/"
+  }
+ ]
+}

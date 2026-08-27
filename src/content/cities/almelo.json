@@ -1,0 +1,45 @@
+{
+ "title": "Boksscholen in Almelo",
+ "city": "Almelo",
+ "metaTitle": "Boksen sportscholen in Almelo",
+ "metaDesc": "Op zoek naar boksen in Almelo? Bekijk hier de beste boksscholen in Almelo!",
+ "intro": "Ben jij op zoek naar een boksschool in Almelo? Dan ben je hier aan het juiste adres! In Almelo kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Almelo overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "FITT Functional Training",
+   "href": "/fitt-functional-training/"
+  },
+  {
+   "name": "Fight Academy Almelo",
+   "href": "/fight-academy-almelo/"
+  },
+  {
+   "name": "Gideon's Gym",
+   "href": "/gideon-s-gym/"
+  },
+  {
+   "name": "Personal Boxing",
+   "href": "/personal-boxing/"
+  },
+  {
+   "name": "Personal Training Almelo",
+   "href": "/personal-training-almelo/"
+  },
+  {
+   "name": "Scorpio Gym",
+   "href": "/scorpio-gym/"
+  },
+  {
+   "name": "The Boxing Club Almelo",
+   "href": "/the-boxing-club-almelo/"
+  },
+  {
+   "name": "Tony's Gym",
+   "href": "/tony-s-gym/"
+  },
+  {
+   "name": "your personal skills",
+   "href": "/your-personal-skills/"
+  }
+ ]
+}

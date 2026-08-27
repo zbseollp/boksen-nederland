@@ -1,0 +1,49 @@
+{
+ "title": "Boksscholen in Schiedam",
+ "city": "Schiedam",
+ "metaTitle": "Boksen sportscholen in Schiedam",
+ "metaDesc": "Op zoek naar boksen in Schiedam? Bekijk hier de beste boksscholen in Schiedam!",
+ "intro": "Ben jij op zoek naar een boksschool in Schiedam? Dan ben je hier aan het juiste adres! In Schiedam kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Schiedam overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Beyond Fighting",
+   "href": "/beyond-fighting/"
+  },
+  {
+   "name": "Budosport",
+   "href": "/budosport/"
+  },
+  {
+   "name": "Fight Team Schiedam",
+   "href": "/fight-team-schiedam/"
+  },
+  {
+   "name": "Kickboksschool Schiedam",
+   "href": "/kickboksschool-schiedam/"
+  },
+  {
+   "name": "M-Vitality Sport Schiedam",
+   "href": "/m-vitality-sport-schiedam/"
+  },
+  {
+   "name": "MoveMakers",
+   "href": "/movemakers/"
+  },
+  {
+   "name": "Old School Boxing Hans de Jong",
+   "href": "/old-school-boxing-hans-de-jong/"
+  },
+  {
+   "name": "Sportinstituut Schiedam",
+   "href": "/sportinstituut-schiedam/"
+  },
+  {
+   "name": "Team Pasztjerik",
+   "href": "/team-pasztjerik/"
+  },
+  {
+   "name": "Total Training Center Rotterdam",
+   "href": "/total-training-center-rotterdam/"
+  }
+ ]
+}

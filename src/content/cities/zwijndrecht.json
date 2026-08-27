@@ -1,0 +1,25 @@
+{
+ "title": "Boksscholen in Zwijndrecht",
+ "city": "Zwijndrecht",
+ "metaTitle": "Boksen sportscholen in Zwijndrecht",
+ "metaDesc": "Op zoek naar boksen in Zwijndrecht? Bekijk hier de beste boksscholen in Zwijndrecht!",
+ "intro": "Ben jij op zoek naar een boksschool in Zwijndrecht? Dan ben je hier aan het juiste adres! In Zwijndrecht kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Zwijndrecht overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Diamond Gym",
+   "href": "/diamond-gym/"
+  },
+  {
+   "name": "FIP Boutique Gym",
+   "href": "/fip-boutique-gym/"
+  },
+  {
+   "name": "HEALTH FIGHT GYM",
+   "href": "/health-fight-gym/"
+  },
+  {
+   "name": "Stand Strong Sport",
+   "href": "/stand-strong-sport/"
+  }
+ ]
+}

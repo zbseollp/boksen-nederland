@@ -1,0 +1,72 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const { entry, related = [] } = Astro.props;
+const { data } = entry;
+
+const dateFmt = (d: Date) =>
+  new Intl.DateTimeFormat("nl-NL", { day: "numeric", month: "long", year: "numeric" }).format(d);
+---
+
+<BaseLayout
+  title={data.metaTitle || data.title}
+  description={data.description}
+  image={data.heroImage}
+  type="article"
+  publishedTime={data.pubDate?.toISOString()}
+  modifiedTime={data.updatedDate?.toISOString()}
+>
+  <div class="wrap-narrow">
+    <nav class="crumbs" aria-label="Kruimelpad">
+      <a href="/">Home</a> &rsaquo; <a href="/nieuws/">Nieuws</a> &rsaquo;
+      <span>{data.title}</span>
+    </nav>
+  </div>
+
+  <article>
+    <header class="article-header wrap-narrow">
+      <h1>{data.title}</h1>
+      <p class="article-meta">
+        {data.author && <>Door {data.author} &middot; </>}
+        <time datetime={data.pubDate?.toISOString()}>{dateFmt(data.pubDate)}</time>
+        {data.updatedDate && (
+          <> &middot; bijgewerkt op <time datetime={data.updatedDate.toISOString()}>{dateFmt(data.updatedDate)}</time></>
+        )}
+      </p>
+    </header>
+
+    {data.heroImage && (
+      <div class="wrap-narrow">
+        <img src={data.heroImage} alt={data.title} class="hero-img" style="border-radius:14px;margin-bottom:2rem" />
+      </div>
+    )}
+
+    <div class="wrap-narrow prose">
+      <slot />
+    </div>
+  </article>
+
+  {related.length > 0 && (
+    <section class="section section-alt" style="margin-top:4rem">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Meer nieuws</h2>
+          <p>Ander nieuws dat je misschien interessant vindt.</p>
+        </div>
+        <div class="grid grid-3">
+          {related.map((p: any) => (
+            <article class="card">
+              <div class="card-body">
+                <h3><a href={`/${p.id}/`}>{p.data.title}</a></h3>
+                <p>{p.data.description}</p>
+                <div class="meta">
+                  <time datetime={p.data.pubDate?.toISOString()}>{dateFmt(p.data.pubDate)}</time>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>

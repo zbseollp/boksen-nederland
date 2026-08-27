@@ -1,0 +1,33 @@
+{
+ "title": "Boksscholen in Hoevelaken",
+ "city": "Hoevelaken",
+ "metaTitle": "Boksen sportscholen in Hoevelaken",
+ "metaDesc": "Op zoek naar boksen in Hoevelaken? Bekijk hier de beste boksscholen in Hoevelaken!",
+ "intro": "Ben jij op zoek naar een boksschool in Hoevelaken? Dan ben je hier aan het juiste adres! In Hoevelaken kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Hoevelaken overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Body Focus",
+   "href": "/body-focus/"
+  },
+  {
+   "name": "De Welness Health & Sportcenter",
+   "href": "/de-welness-health-sportcenter/"
+  },
+  {
+   "name": "Elisa Bergheger Coaching",
+   "href": "/elisa-bergheger-coaching/"
+  },
+  {
+   "name": "Fitness Centrum Hoevelaken",
+   "href": "/fitness-centrum-hoevelaken/"
+  },
+  {
+   "name": "Millennium Sports",
+   "href": "/millennium-sports/"
+  },
+  {
+   "name": "The Iron Gym",
+   "href": "/the-iron-gym/"
+  }
+ ]
+}

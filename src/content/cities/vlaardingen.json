@@ -1,0 +1,53 @@
+{
+ "title": "Boksscholen in Vlaardingen",
+ "city": "Vlaardingen",
+ "metaTitle": "Boksen sportscholen in Vlaardingen",
+ "metaDesc": "Op zoek naar boksen in Vlaardingen? Bekijk hier de beste boksscholen in Vlaardingen!",
+ "intro": "Ben jij op zoek naar een boksschool in Vlaardingen? Dan ben je hier aan het juiste adres! In Vlaardingen kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Vlaardingen overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Better Together",
+   "href": "/better-together/"
+  },
+  {
+   "name": "Crossfit Vlaardingen",
+   "href": "/crossfit-vlaardingen/"
+  },
+  {
+   "name": "Fightteam Vlaardingen",
+   "href": "/fightteam-vlaardingen/"
+  },
+  {
+   "name": "FitByGeza",
+   "href": "/fitbygeza/"
+  },
+  {
+   "name": "Kickboksen voor Vrouwen Vlaardingen",
+   "href": "/kickboksen-voor-vrouwen-vlaardingen/"
+  },
+  {
+   "name": "Ladies Gym",
+   "href": "/ladies-gym/"
+  },
+  {
+   "name": "MMA Vlaardingen",
+   "href": "/mma-vlaardingen/"
+  },
+  {
+   "name": "Multisport Vlaardingen",
+   "href": "/multisport-vlaardingen/"
+  },
+  {
+   "name": "Petra's Individuele Trainingen",
+   "href": "/petra-s-individuele-trainingen/"
+  },
+  {
+   "name": "Premium Gym",
+   "href": "/premium-gym/"
+  },
+  {
+   "name": "The Boxing Academy",
+   "href": "/the-boxing-academy/"
+  }
+ ]
+}

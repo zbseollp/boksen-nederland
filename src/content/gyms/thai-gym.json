@@ -1,0 +1,57 @@
+{
+ "title": "Thai Gym",
+ "city": "Zoetermeer",
+ "citySlug": "zoetermeer",
+ "website": "http://thaigym.nl/",
+ "phone": "+31 6 22301467",
+ "address": "Zoetermeer, Storkstraat 5",
+ "lastUpdated": "25-01-2024",
+ "intro": "Thai Gym is een sportschool in Zoetermeer waar je boksen kunt beoefenen. Op Boksen-Nederland.nl proberen wij actuele informatie over Thai Gym te verzamelen. Ben jij op zoek naar een proefles boksen in Zoetermeer? Neem dan contact op met Thai Gym of bekijk andere sportscholen waar je boksen kunt beoefenen in Zoetermeer.",
+ "schedule": "Bekijk hieronder de Thai Gym trainingstijden: De trainingstijden zijn onbekend. Bent u de eigenaar van deze sportschool en wilt u de trainingstijden toevoegen? Neem dan contact met ons op!",
+ "costs": "De contributie voor een abonnement bij Thai Gym is ons niet bekend. Neem contact op met de sportschool voor uitgebreide informatie met betrekking tot abonnementen.",
+ "locationNote": "Bekijk hieronder de locatie van Thai Gym in Zoetermeer op de kaart: Unknown",
+ "metaTitle": "Thai Gym - Boksen bij Thai Gym",
+ "metaDesc": "Thai Gym is een sportschool in Zoetermeer waar je kunt boksen. Bekijk hier meer info over de locatie!",
+ "nearby": [
+  {
+   "name": "Combo gym",
+   "href": "/combo-gym/"
+  },
+  {
+   "name": "FBA Personal Training",
+   "href": "/fba-personal-training/"
+  },
+  {
+   "name": "Gym Vegting",
+   "href": "/gym-vegting/"
+  },
+  {
+   "name": "Huk-Tti Sport Zoetermeer",
+   "href": "/huk-tti-sport-zoetermeer/"
+  },
+  {
+   "name": "Kickboxing Sakura",
+   "href": "/kickboxing-sakura/"
+  },
+  {
+   "name": "Live2bFit",
+   "href": "/live2bfit/"
+  },
+  {
+   "name": "M/M StraatSport",
+   "href": "/m-m-straatsport/"
+  },
+  {
+   "name": "Premium Boxing Club Zoetermeer",
+   "href": "/premium-boxing-club-zoetermeer/"
+  },
+  {
+   "name": "Sportschool Da Graca",
+   "href": "/sportschool-da-graca/"
+  },
+  {
+   "name": "Zoetermeer Kickbox Academy",
+   "href": "/zoetermeer-kickbox-academy/"
+  }
+ ]
+}

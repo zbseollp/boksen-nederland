@@ -1,0 +1,29 @@
+{
+ "title": "Boksscholen in Etten-Leur",
+ "city": "Etten-Leur",
+ "metaTitle": "Boksen sportscholen in Etten-Leur",
+ "metaDesc": "Op zoek naar boksen in Etten-Leur? Bekijk hier de beste boksscholen in Etten-Leur!",
+ "intro": "Ben jij op zoek naar een boksschool in Etten-Leur? Dan ben je hier aan het juiste adres! In Etten-Leur kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Etten-Leur overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Building you",
+   "href": "/building-you/"
+  },
+  {
+   "name": "JT-combat",
+   "href": "/jt-combat/"
+  },
+  {
+   "name": "Mabuhay Self-Defense",
+   "href": "/mabuhay-self-defense/"
+  },
+  {
+   "name": "Oldscool Fit Etten-Leur",
+   "href": "/oldscool-fit-etten-leur/"
+  },
+  {
+   "name": "PT-MR personal training",
+   "href": "/pt-mr-personal-training/"
+  }
+ ]
+}

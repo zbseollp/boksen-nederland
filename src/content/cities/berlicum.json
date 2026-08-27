@@ -1,0 +1,21 @@
+{
+ "title": "Boksscholen in Berlicum",
+ "city": "Berlicum",
+ "metaTitle": "Boksen sportscholen in Berlicum",
+ "metaDesc": "Op zoek naar boksen in Berlicum? Bekijk hier de beste boksscholen in Berlicum!",
+ "intro": "Ben jij op zoek naar een boksschool in Berlicum? Dan ben je hier aan het juiste adres! In Berlicum kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Berlicum overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Fenix Fitness",
+   "href": "/fenix-fitness/"
+  },
+  {
+   "name": "Funky Gym",
+   "href": "/funky-gym/"
+  },
+  {
+   "name": "Funky Monkey",
+   "href": "/funky-monkey/"
+  }
+ ]
+}

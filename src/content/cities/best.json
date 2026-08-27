@@ -1,0 +1,29 @@
+{
+ "title": "Boksscholen in Best",
+ "city": "Best",
+ "metaTitle": "Boksen sportscholen in Best",
+ "metaDesc": "Op zoek naar boksen in Best? Bekijk hier de beste boksscholen in Best!",
+ "intro": "Ben jij op zoek naar een boksschool in Best? Dan ben je hier aan het juiste adres! In Best kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Best overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Jovosport",
+   "href": "/jovosport/"
+  },
+  {
+   "name": "PowerBase Fitness",
+   "href": "/powerbase-fitness/"
+  },
+  {
+   "name": "Soko Combat System",
+   "href": "/soko-combat-system/"
+  },
+  {
+   "name": "Spear Sport Center",
+   "href": "/spear-sport-center/"
+  },
+  {
+   "name": "The Jab Boxing",
+   "href": "/the-jab-boxing/"
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "title": "Boksscholen in Maarssen",
+ "city": "Maarssen",
+ "metaTitle": "Boksen sportscholen in Maarssen",
+ "metaDesc": "Op zoek naar boksen in Maarssen? Bekijk hier de beste boksscholen in Maarssen!",
+ "intro": "Ben jij op zoek naar een boksschool in Maarssen? Dan ben je hier aan het juiste adres! In Maarssen kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Maarssen overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Born to Move",
+   "href": "/born-to-move/"
+  },
+  {
+   "name": "Club BE it",
+   "href": "/club-be-it/"
+  },
+  {
+   "name": "Personal Trainer aan huis",
+   "href": "/personal-trainer-aan-huis/"
+  },
+  {
+   "name": "Workoutpaysoff",
+   "href": "/workoutpaysoff/"
+  }
+ ]
+}

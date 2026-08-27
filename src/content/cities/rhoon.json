@@ -1,0 +1,25 @@
+{
+ "title": "Boksscholen in Rhoon",
+ "city": "Rhoon",
+ "metaTitle": "Boksen sportscholen in Rhoon",
+ "metaDesc": "Op zoek naar boksen in Rhoon? Bekijk hier de beste boksscholen in Rhoon!",
+ "intro": "Ben jij op zoek naar een boksschool in Rhoon? Dan ben je hier aan het juiste adres! In Rhoon kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Rhoon overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Garage Gym",
+   "href": "/garage-gym/"
+  },
+  {
+   "name": "Sam3Dfit",
+   "href": "/sam3dfit/"
+  },
+  {
+   "name": "Skanders Albrandswaard",
+   "href": "/skanders-albrandswaard/"
+  },
+  {
+   "name": "Trainbox",
+   "href": "/trainbox/"
+  }
+ ]
+}

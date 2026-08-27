@@ -1,0 +1,48 @@
+{
+ "title": "NeRo's Gym",
+ "city": "Sneek",
+ "citySlug": "sneek",
+ "website": "http://www.nerosgym.com/",
+ "address": "+",
+ "lastUpdated": "25-01-2024",
+ "intro": "NeRo's Gym is een sportschool in Sneek waar je boksen kunt beoefenen. Op Boksen-Nederland.nl proberen wij actuele informatie over NeRo's Gym te verzamelen. Ben jij op zoek naar een proefles boksen in Sneek? Neem dan contact op met NeRo's Gym of bekijk andere sportscholen waar je boksen kunt beoefenen in Sneek.",
+ "schedule": "Bekijk hieronder de NeRo's Gym trainingstijden: De trainingstijden zijn onbekend. Bent u de eigenaar van deze sportschool en wilt u de trainingstijden toevoegen? Neem dan contact met ons op!",
+ "costs": "De contributie voor een abonnement bij NeRo's Gym is ons niet bekend. Neem contact op met de sportschool voor uitgebreide informatie met betrekking tot abonnementen.",
+ "locationNote": "Bekijk hieronder de locatie van NeRo's Gym in Sneek op de kaart: Unknown",
+ "metaTitle": "NeRo's Gym - Boksen bij NeRo's Gym",
+ "metaDesc": "NeRo's Gym is een sportschool in Sneek waar je kunt boksen. Bekijk hier meer info over de locatie!",
+ "nearby": [
+  {
+   "name": "AWRF/Gym De Leeuw",
+   "href": "/awrf-gym-de-leeuw/"
+  },
+  {
+   "name": "Boksvereniging Olympia",
+   "href": "/boksvereniging-olympia/"
+  },
+  {
+   "name": "Fitness Health Club Sneek",
+   "href": "/fitness-health-club-sneek/"
+  },
+  {
+   "name": "Kickboxing Sneek",
+   "href": "/kickboxing-sneek/"
+  },
+  {
+   "name": "Sportcentrum Life Style",
+   "href": "/sportcentrum-life-style/"
+  },
+  {
+   "name": "Sportcentrum Prim",
+   "href": "/sportcentrum-prim/"
+  },
+  {
+   "name": "Sportclub F en F The Inner Way",
+   "href": "/sportclub-f-en-f-the-inner-way/"
+  },
+  {
+   "name": "bakkerboxing",
+   "href": "/bakkerboxing/"
+  }
+ ]
+}

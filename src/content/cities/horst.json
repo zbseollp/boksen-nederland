@@ -1,0 +1,21 @@
+{
+ "title": "Boksscholen in Horst",
+ "city": "Horst",
+ "metaTitle": "Boksen sportscholen in Horst",
+ "metaDesc": "Op zoek naar boksen in Horst? Bekijk hier de beste boksscholen in Horst!",
+ "intro": "Ben jij op zoek naar een boksschool in Horst? Dan ben je hier aan het juiste adres! In Horst kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Horst overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Energetic Training",
+   "href": "/energetic-training/"
+  },
+  {
+   "name": "Limed Sport",
+   "href": "/limed-sport/"
+  },
+  {
+   "name": "Mu-Thaigym",
+   "href": "/mu-thaigym/"
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "title": "Boksscholen in Ede",
+ "city": "Ede",
+ "metaTitle": "Boksen sportscholen in Ede",
+ "metaDesc": "Op zoek naar boksen in Ede? Bekijk hier de beste boksscholen in Ede!",
+ "intro": "Ben jij op zoek naar een boksschool in Ede? Dan ben je hier aan het juiste adres! In Ede kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Ede overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Allround Training Ede",
+   "href": "/allround-training-ede/"
+  },
+  {
+   "name": "Budo Academy Physical",
+   "href": "/budo-academy-physical/"
+  },
+  {
+   "name": "Lawa's Gym",
+   "href": "/lawa-s-gym/"
+  },
+  {
+   "name": "Sport Team Ede",
+   "href": "/sport-team-ede/"
+  },
+  {
+   "name": "Sportschool Herbert",
+   "href": "/sportschool-herbert/"
+  },
+  {
+   "name": "The Box by Jasper",
+   "href": "/the-box-by-jasper/"
+  }
+ ]
+}

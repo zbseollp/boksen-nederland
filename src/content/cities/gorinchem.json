@@ -1,0 +1,37 @@
+{
+ "title": "Boksscholen in Gorinchem",
+ "city": "Gorinchem",
+ "metaTitle": "Boksen sportscholen in Gorinchem",
+ "metaDesc": "Op zoek naar boksen in Gorinchem? Bekijk hier de beste boksscholen in Gorinchem!",
+ "intro": "Ben jij op zoek naar een boksschool in Gorinchem? Dan ben je hier aan het juiste adres! In Gorinchem kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Gorinchem overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Healthy Boxing",
+   "href": "/healthy-boxing/"
+  },
+  {
+   "name": "INSPIRE Fitness Club",
+   "href": "/inspire-fitness-club/"
+  },
+  {
+   "name": "Living Well Health & Fitness Gorinchem",
+   "href": "/living-well-health-fitness-gorinchem/"
+  },
+  {
+   "name": "POWER ATHLETES",
+   "href": "/power-athletes/"
+  },
+  {
+   "name": "Ronin Mixed Martial Arts",
+   "href": "/ronin-mixed-martial-arts/"
+  },
+  {
+   "name": "Team Massarroni",
+   "href": "/team-massarroni/"
+  },
+  {
+   "name": "Wu Wei Wing Chun",
+   "href": "/wu-wei-wing-chun/"
+  }
+ ]
+}

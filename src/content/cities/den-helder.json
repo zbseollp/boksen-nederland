@@ -1,0 +1,33 @@
+{
+ "title": "Boksscholen in Den Helder",
+ "city": "Den Helder",
+ "metaTitle": "Boksen sportscholen in Den Helder",
+ "metaDesc": "Op zoek naar boksen in Den Helder? Bekijk hier de beste boksscholen in Den Helder!",
+ "intro": "Ben jij op zoek naar een boksschool in Den Helder? Dan ben je hier aan het juiste adres! In Den Helder kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Den Helder overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "BigGym Den Helder",
+   "href": "/biggym-den-helder/"
+  },
+  {
+   "name": "Fightshop.nl",
+   "href": "/fightshop-nl/"
+  },
+  {
+   "name": "Fitnesscentrum Bodyfit",
+   "href": "/fitnesscentrum-bodyfit/"
+  },
+  {
+   "name": "Sportingclub Theo Komen",
+   "href": "/sportingclub-theo-komen/"
+  },
+  {
+   "name": "SportsArt Den Helder",
+   "href": "/sportsart-den-helder/"
+  },
+  {
+   "name": "Studio Sport Spirit",
+   "href": "/studio-sport-spirit/"
+  }
+ ]
+}

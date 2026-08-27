@@ -1,0 +1,45 @@
+{
+ "title": "Boksscholen in Maassluis",
+ "city": "Maassluis",
+ "metaTitle": "Boksen sportscholen in Maassluis",
+ "metaDesc": "Op zoek naar boksen in Maassluis? Bekijk hier de beste boksscholen in Maassluis!",
+ "intro": "Ben jij op zoek naar een boksschool in Maassluis? Dan ben je hier aan het juiste adres! In Maassluis kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Maassluis overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Fighting 4 All",
+   "href": "/fighting-4-all/"
+  },
+  {
+   "name": "Fitline Maassluis",
+   "href": "/fitline-maassluis/"
+  },
+  {
+   "name": "GT Sports",
+   "href": "/gt-sports/"
+  },
+  {
+   "name": "Healthstyle Sports",
+   "href": "/healthstyle-sports/"
+  },
+  {
+   "name": "Just Do Sports",
+   "href": "/just-do-sports/"
+  },
+  {
+   "name": "Mahorokan Sports Club",
+   "href": "/mahorokan-sports-club/"
+  },
+  {
+   "name": "Motion PT",
+   "href": "/motion-pt/"
+  },
+  {
+   "name": "Sport Center Maassluis",
+   "href": "/sport-center-maassluis/"
+  },
+  {
+   "name": "Sport Studio Maassluis",
+   "href": "/sport-studio-maassluis/"
+  }
+ ]
+}

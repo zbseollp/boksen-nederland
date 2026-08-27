@@ -1,0 +1,21 @@
+{
+ "title": "Boksscholen in Hoogezand",
+ "city": "Hoogezand",
+ "metaTitle": "Boksen sportscholen in Hoogezand",
+ "metaDesc": "Op zoek naar boksen in Hoogezand? Bekijk hier de beste boksscholen in Hoogezand!",
+ "intro": "Ben jij op zoek naar een boksschool in Hoogezand? Dan ben je hier aan het juiste adres! In Hoogezand kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Hoogezand overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Lamotta Boxing",
+   "href": "/lamotta-boxing/"
+  },
+  {
+   "name": "Sportclub SENS",
+   "href": "/sportclub-sens/"
+  },
+  {
+   "name": "StayFit Personal Training",
+   "href": "/stayfit-personal-training/"
+  }
+ ]
+}

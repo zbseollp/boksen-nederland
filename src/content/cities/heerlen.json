@@ -1,0 +1,45 @@
+{
+ "title": "Boksscholen in Heerlen",
+ "city": "Heerlen",
+ "metaTitle": "Boksen sportscholen in Heerlen",
+ "metaDesc": "Op zoek naar boksen in Heerlen? Bekijk hier de beste boksscholen in Heerlen!",
+ "intro": "Ben jij op zoek naar een boksschool in Heerlen? Dan ben je hier aan het juiste adres! In Heerlen kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Heerlen overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "AREA 5",
+   "href": "/area-5/"
+  },
+  {
+   "name": "Boksvereniging Olympia '75",
+   "href": "/boksvereniging-olympia-75/"
+  },
+  {
+   "name": "G- Force Gym",
+   "href": "/g-force-gym/"
+  },
+  {
+   "name": "Heppenhuis Boxing Concept",
+   "href": "/heppenhuis-boxing-concept/"
+  },
+  {
+   "name": "Hoyer's gym",
+   "href": "/hoyer-s-gym/"
+  },
+  {
+   "name": "Ilse&Vicente",
+   "href": "/ilse-vicente/"
+  },
+  {
+   "name": "MFG Sports Academy",
+   "href": "/mfg-sports-academy/"
+  },
+  {
+   "name": "Mason Gloves",
+   "href": "/mason-gloves/"
+  },
+  {
+   "name": "Team Thriving Training Center",
+   "href": "/team-thriving-training-center/"
+  }
+ ]
+}

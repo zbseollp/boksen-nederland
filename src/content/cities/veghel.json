@@ -1,0 +1,33 @@
+{
+ "title": "Boksscholen in Veghel",
+ "city": "Veghel",
+ "metaTitle": "Boksen sportscholen in Veghel",
+ "metaDesc": "Op zoek naar boksen in Veghel? Bekijk hier de beste boksscholen in Veghel!",
+ "intro": "Ben jij op zoek naar een boksschool in Veghel? Dan ben je hier aan het juiste adres! In Veghel kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Veghel overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Blush Sports",
+   "href": "/blush-sports/"
+  },
+  {
+   "name": "CLUBPT Veghel",
+   "href": "/clubpt-veghel/"
+  },
+  {
+   "name": "Meliani Fight & Fitness Veghel",
+   "href": "/meliani-fight-fitness-veghel/"
+  },
+  {
+   "name": "Nin-Li Kickboksen",
+   "href": "/nin-li-kickboksen/"
+  },
+  {
+   "name": "Sportstudio Van Dijk",
+   "href": "/sportstudio-van-dijk/"
+  },
+  {
+   "name": "Xplorestrength & Bokscoaching",
+   "href": "/xplorestrength-bokscoaching/"
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+---
+const year = new Date().getFullYear();
+
+const bigCities = [
+  { slug: "amsterdam", label: "Amsterdam" },
+  { slug: "rotterdam", label: "Rotterdam" },
+  { slug: "den-haag", label: "Den Haag" },
+  { slug: "utrecht", label: "Utrecht" },
+  { slug: "eindhoven", label: "Eindhoven" },
+  { slug: "groningen", label: "Groningen" },
+];
+---
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="/logo.svg" alt="Boksen-Nederland.nl" height="32" />
+        </div>
+        <p>
+          Het overzicht van boksscholen en sportscholen in Nederland waar je kunt
+          boksen. Vind een boksschool bij jou in de buurt, bekijk trainingstijden en
+          neem contact op voor een proefles.
+        </p>
+      </div>
+
+      <div>
+        <h4>Grote steden</h4>
+        <ul>
+          {bigCities.map((c) => (
+            <li><a href={`/scholen/${c.slug}/`}>{c.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h4>Over deze site</h4>
+        <ul>
+          <li><a href="/scholen/">Alle boksscholen</a></li>
+          <li><a href="/boksers/">Boksers</a></li>
+          <li><a href="/nieuws/">Nieuws</a></li>
+          <li><a href="/over-ons/">Over ons</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Juridisch</h4>
+        <ul>
+          <li><a href="/privacyverklaring/">Privacyverklaring</a></li>
+          <li><a href="/algemene-voorwaarden/">Algemene voorwaarden</a></li>
+          <li><a href="/sitemap/">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; {year} Boksen-Nederland.nl — Alle rechten voorbehouden.</span>
+      <span>Boksscholen en sportscholen in heel Nederland.</span>
+    </div>
+  </div>
+</footer>

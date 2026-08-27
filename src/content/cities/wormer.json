@@ -1,0 +1,21 @@
+{
+ "title": "Boksscholen in Wormer",
+ "city": "Wormer",
+ "metaTitle": "Boksen sportscholen in Wormer",
+ "metaDesc": "Op zoek naar boksen in Wormer? Bekijk hier de beste boksscholen in Wormer!",
+ "intro": "Ben jij op zoek naar een boksschool in Wormer? Dan ben je hier aan het juiste adres! In Wormer kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Wormer overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Fight Ready",
+   "href": "/fight-ready/"
+  },
+  {
+   "name": "Kick&Fit Wormer",
+   "href": "/kick-fit-wormer/"
+  },
+  {
+   "name": "Lijfkracht Wormer",
+   "href": "/lijfkracht-wormer/"
+  }
+ ]
+}

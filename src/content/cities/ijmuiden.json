@@ -1,0 +1,25 @@
+{
+ "title": "Boksscholen in IJmuiden",
+ "city": "IJmuiden",
+ "metaTitle": "Boksen sportscholen in IJmuiden",
+ "metaDesc": "Op zoek naar boksen in IJmuiden? Bekijk hier de beste boksscholen in IJmuiden!",
+ "intro": "Ben jij op zoek naar een boksschool in IJmuiden? Dan ben je hier aan het juiste adres! In IJmuiden kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio IJmuiden overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Gym Vogel",
+   "href": "/gym-vogel/"
+  },
+  {
+   "name": "Personal Training Velsen",
+   "href": "/personal-training-velsen/"
+  },
+  {
+   "name": "Tinca-Tinca Boxing Gym",
+   "href": "/tinca-tinca-boxing-gym/"
+  },
+  {
+   "name": "Vereniging Count Down",
+   "href": "/vereniging-count-down/"
+  }
+ ]
+}

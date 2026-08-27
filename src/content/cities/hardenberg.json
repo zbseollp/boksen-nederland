@@ -1,0 +1,25 @@
+{
+ "title": "Boksscholen in Hardenberg",
+ "city": "Hardenberg",
+ "metaTitle": "Boksen sportscholen in Hardenberg",
+ "metaDesc": "Op zoek naar boksen in Hardenberg? Bekijk hier de beste boksscholen in Hardenberg!",
+ "intro": "Ben jij op zoek naar een boksschool in Hardenberg? Dan ben je hier aan het juiste adres! In Hardenberg kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Hardenberg overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Active & Fit",
+   "href": "/active-fit/"
+  },
+  {
+   "name": "De Hagedoorn Mentaliteit",
+   "href": "/de-hagedoorn-mentaliteit/"
+  },
+  {
+   "name": "Nijman kickboxing",
+   "href": "/nijman-kickboxing/"
+  },
+  {
+   "name": "Simon Zoetebier PTer",
+   "href": "/simon-zoetebier-pter/"
+  }
+ ]
+}

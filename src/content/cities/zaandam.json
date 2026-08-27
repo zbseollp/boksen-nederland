@@ -1,0 +1,29 @@
+{
+ "title": "Boksscholen in Zaandam",
+ "city": "Zaandam",
+ "metaTitle": "Boksen sportscholen in Zaandam",
+ "metaDesc": "Op zoek naar boksen in Zaandam? Bekijk hier de beste boksscholen in Zaandam!",
+ "intro": "Ben jij op zoek naar een boksschool in Zaandam? Dan ben je hier aan het juiste adres! In Zaandam kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Zaandam overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "De Vechtfabriek",
+   "href": "/de-vechtfabriek/"
+  },
+  {
+   "name": "Motivation for you Zaandam",
+   "href": "/motivation-for-you-zaandam/"
+  },
+  {
+   "name": "Personal Fitness Center Zaandam",
+   "href": "/personal-fitness-center-zaandam/"
+  },
+  {
+   "name": "Personal Trainer Zaandam",
+   "href": "/personal-trainer-zaandam/"
+  },
+  {
+   "name": "Salomons Sportschool",
+   "href": "/salomons-sportschool/"
+  }
+ ]
+}

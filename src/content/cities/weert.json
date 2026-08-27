@@ -1,0 +1,45 @@
+{
+ "title": "Boksscholen in Weert",
+ "city": "Weert",
+ "metaTitle": "Boksen sportscholen in Weert",
+ "metaDesc": "Op zoek naar boksen in Weert? Bekijk hier de beste boksscholen in Weert!",
+ "intro": "Ben jij op zoek naar een boksschool in Weert? Dan ben je hier aan het juiste adres! In Weert kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Weert overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Bruut Sportief",
+   "href": "/bruut-sportief/"
+  },
+  {
+   "name": "CrossFit PRIMAL",
+   "href": "/crossfit-primal/"
+  },
+  {
+   "name": "De Kickboksschool",
+   "href": "/de-kickboksschool/"
+  },
+  {
+   "name": "Fitklub Weert",
+   "href": "/fitklub-weert/"
+  },
+  {
+   "name": "Krav Maga Limburg",
+   "href": "/krav-maga-limburg/"
+  },
+  {
+   "name": "Loods 37 fitness Weert",
+   "href": "/loods-37-fitness-weert/"
+  },
+  {
+   "name": "Meuwissen training & coaching",
+   "href": "/meuwissen-training-coaching/"
+  },
+  {
+   "name": "MovementPro",
+   "href": "/movementpro/"
+  },
+  {
+   "name": "NOX GYM",
+   "href": "/nox-gym/"
+  }
+ ]
+}

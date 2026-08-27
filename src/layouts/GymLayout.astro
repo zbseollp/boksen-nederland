@@ -1,0 +1,121 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const { entry } = Astro.props;
+const d = entry.data;
+
+const mapsUrl = d.address
+  ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(d.address)}`
+  : null;
+
+const websiteLabel = d.website
+  ? d.website.replace(/^https?:\/\//, "").replace(/\/$/, "")
+  : null;
+---
+
+<BaseLayout
+  title={d.metaTitle || `${d.title} — Boksen-Nederland.nl`}
+  description={d.metaDesc || d.intro || ""}
+>
+  <div class="gym-head">
+    <div class="wrap">
+      {d.city && (
+        <a class="city" href={`/scholen/${d.citySlug}/`}>{d.city}</a>
+      )}
+      <h1>{d.title}</h1>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Kruimelpad">
+      <a href="/">Home</a> &rsaquo; <a href="/scholen/">Boksscholen</a>
+      {d.city && (
+        <> &rsaquo; <a href={`/scholen/${d.citySlug}/`}>{d.city}</a></>
+      )}
+      &rsaquo; <span>{d.title}</span>
+    </nav>
+  </div>
+
+  <section class="section">
+    <div class="wrap gym-layout">
+      <div class="prose">
+        {d.intro && <p>{d.intro}</p>}
+
+        <h2>Locatie</h2>
+        {d.address ? (
+          <p>
+            {d.title} is gevestigd aan <strong>{d.address}</strong>.
+            {mapsUrl && (
+              <> Bekijk de <a href={mapsUrl} rel="nofollow noopener" target="_blank">locatie op de kaart</a>.</>
+            )}
+          </p>
+        ) : (
+          <p>Het adres van {d.title} is bij ons niet bekend.</p>
+        )}
+
+        <h2>Trainingsschema</h2>
+        <p>{d.schedule || `De trainingstijden van ${d.title} zijn bij ons niet bekend. Neem contact op met de sportschool voor het actuele trainingsschema.`}</p>
+
+        <h2>Kosten</h2>
+        <p>{d.costs || `De contributie voor een abonnement bij ${d.title} is ons niet bekend. Neem contact op met de sportschool voor uitgebreide informatie met betrekking tot abonnementen.`}</p>
+
+        {d.nearby && d.nearby.length > 0 && (
+          <>
+            <h2>Boksscholen in {d.city}</h2>
+            <p>Bekijk hieronder informatie over andere sportscholen in {d.city}.</p>
+            <ul class="col-list">
+              {d.nearby.map((n: any) => (
+                <li><a href={n.href}>{n.name}</a></li>
+              ))}
+            </ul>
+          </>
+        )}
+      </div>
+
+      <aside class="factbox">
+        <h2>Gegevens</h2>
+        <dl>
+          <dt>Sportschool</dt>
+          <dd>{d.title}</dd>
+
+          {d.city && (
+            <>
+              <dt>Plaats</dt>
+              <dd><a href={`/scholen/${d.citySlug}/`}>{d.city}</a></dd>
+            </>
+          )}
+
+          {d.address && (
+            <>
+              <dt>Adres</dt>
+              <dd>{d.address}</dd>
+            </>
+          )}
+
+          {d.phone && (
+            <>
+              <dt>Telefoon</dt>
+              <dd><a href={`tel:${d.phone.replace(/\s/g, "")}`}>{d.phone}</a></dd>
+            </>
+          )}
+
+          {d.website && (
+            <>
+              <dt>Website</dt>
+              <dd><a href={d.website} rel="nofollow noopener" target="_blank">{websiteLabel}</a></dd>
+            </>
+          )}
+
+          {d.lastUpdated && (
+            <>
+              <dt>Laatst bijgewerkt</dt>
+              <dd>{d.lastUpdated}</dd>
+            </>
+          )}
+        </dl>
+
+        <a class="btn" href="/contact/">Gegevens aanvullen</a>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,29 @@
+{
+ "title": "Boksscholen in Lisse",
+ "city": "Lisse",
+ "metaTitle": "Boksen sportscholen in Lisse",
+ "metaDesc": "Op zoek naar boksen in Lisse? Bekijk hier de beste boksscholen in Lisse!",
+ "intro": "Ben jij op zoek naar een boksschool in Lisse? Dan ben je hier aan het juiste adres! In Lisse kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Lisse overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Aarts Sport Lisse",
+   "href": "/aarts-sport-lisse/"
+  },
+  {
+   "name": "Bari Gym",
+   "href": "/bari-gym/"
+  },
+  {
+   "name": "BodyBouw",
+   "href": "/bodybouw/"
+  },
+  {
+   "name": "Fit & Shape",
+   "href": "/fit-shape/"
+  },
+  {
+   "name": "Pt-boxing-lisse.nl",
+   "href": "/pt-boxing-lisse-nl/"
+  }
+ ]
+}

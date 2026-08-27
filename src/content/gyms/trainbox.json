@@ -1,0 +1,29 @@
+{
+ "title": "Trainbox",
+ "city": "Rhoon",
+ "citySlug": "rhoon",
+ "website": "http://www.trainbox.nu/",
+ "phone": "+31 6 22709271",
+ "address": "Rhoon, Handelsweg 9A",
+ "lastUpdated": "25-01-2024",
+ "intro": "Trainbox is een sportschool in Rhoon waar je boksen kunt beoefenen. Op Boksen-Nederland.nl proberen wij actuele informatie over Trainbox te verzamelen. Ben jij op zoek naar een proefles boksen in Rhoon? Neem dan contact op met Trainbox of bekijk andere sportscholen waar je boksen kunt beoefenen in Rhoon.",
+ "schedule": "Bekijk hieronder de Trainbox trainingstijden: De trainingstijden zijn onbekend. Bent u de eigenaar van deze sportschool en wilt u de trainingstijden toevoegen? Neem dan contact met ons op!",
+ "costs": "De contributie voor een abonnement bij Trainbox is ons niet bekend. Neem contact op met de sportschool voor uitgebreide informatie met betrekking tot abonnementen.",
+ "locationNote": "Bekijk hieronder de locatie van Trainbox in Rhoon op de kaart: Unknown",
+ "metaTitle": "Trainbox - Boksen bij Trainbox",
+ "metaDesc": "Trainbox is een sportschool in Rhoon waar je kunt boksen. Bekijk hier meer info over de locatie!",
+ "nearby": [
+  {
+   "name": "Garage Gym",
+   "href": "/garage-gym/"
+  },
+  {
+   "name": "Sam3Dfit",
+   "href": "/sam3dfit/"
+  },
+  {
+   "name": "Skanders Albrandswaard",
+   "href": "/skanders-albrandswaard/"
+  }
+ ]
+}

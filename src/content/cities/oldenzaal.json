@@ -1,0 +1,25 @@
+{
+ "title": "Boksscholen in Oldenzaal",
+ "city": "Oldenzaal",
+ "metaTitle": "Boksen sportscholen in Oldenzaal",
+ "metaDesc": "Op zoek naar boksen in Oldenzaal? Bekijk hier de beste boksscholen in Oldenzaal!",
+ "intro": "Ben jij op zoek naar een boksschool in Oldenzaal? Dan ben je hier aan het juiste adres! In Oldenzaal kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Oldenzaal overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Fit In Twente",
+   "href": "/fit-in-twente/"
+  },
+  {
+   "name": "GetFit4Life",
+   "href": "/getfit4life/"
+  },
+  {
+   "name": "Lifestyle Center",
+   "href": "/lifestyle-center/"
+  },
+  {
+   "name": "ProFitness Oldenzaal & Denekamp",
+   "href": "/profitness-oldenzaal-denekamp/"
+  }
+ ]
+}

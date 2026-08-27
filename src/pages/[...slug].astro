@@ -1,0 +1,55 @@
+---
+import { getCollection, render } from 'astro:content';
+import BlogPostLayout from '../layouts/BlogPostLayout.astro';
+import GymLayout from '../layouts/GymLayout.astro';
+import BoxerLayout from '../layouts/BoxerLayout.astro';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  const gymEntries = await getCollection('gyms');
+  const boxerEntries = await getCollection('boxers');
+
+  const sorted = [...blogEntries].sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  );
+
+  const posts = blogEntries.map((entry) => ({
+    params: { slug: entry.id },
+    props: {
+      entry,
+      type: 'post',
+      related: sorted.filter((p) => p.id !== entry.id).slice(0, 3),
+    },
+  }));
+
+  // Boksschool-vermeldingen en boksers delen de root-namespace met de posts
+  const gyms = gymEntries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry, type: 'gym', related: [] },
+  }));
+
+  const boxers = boxerEntries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry, type: 'boxer', related: [] },
+  }));
+
+  return [...posts, ...gyms, ...boxers];
+}
+
+const { entry, type, related } = Astro.props;
+
+const rendered = type === 'post' || type === 'boxer' ? await render(entry) : null;
+const Content = rendered?.Content;
+---
+
+{type === 'post' ? (
+  <BlogPostLayout entry={entry} related={related}>
+    <Content />
+  </BlogPostLayout>
+) : type === 'boxer' ? (
+  <BoxerLayout entry={entry}>
+    <Content />
+  </BoxerLayout>
+) : (
+  <GymLayout entry={entry} />
+)}

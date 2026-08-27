@@ -1,0 +1,49 @@
+{
+ "title": "Gideon's Gym",
+ "city": "Almelo",
+ "citySlug": "almelo",
+ "website": "http://www.gideonsgym.nl/",
+ "phone": "+31 6 14160300",
+ "address": "Almelo, Twentepoort Oost 49A, 7609 RG",
+ "lastUpdated": "25-01-2024",
+ "intro": "Gideon's Gym is een sportschool in Almelo waar je boksen kunt beoefenen. Op Boksen-Nederland.nl proberen wij actuele informatie over Gideon's Gym te verzamelen. Ben jij op zoek naar een proefles boksen in Almelo? Neem dan contact op met Gideon's Gym of bekijk andere sportscholen waar je boksen kunt beoefenen in Almelo.",
+ "schedule": "Bekijk hieronder de Gideon's Gym trainingstijden: De trainingstijden zijn onbekend. Bent u de eigenaar van deze sportschool en wilt u de trainingstijden toevoegen? Neem dan contact met ons op!",
+ "costs": "De contributie voor een abonnement bij Gideon's Gym is ons niet bekend. Neem contact op met de sportschool voor uitgebreide informatie met betrekking tot abonnementen.",
+ "locationNote": "Bekijk hieronder de locatie van Gideon's Gym in Almelo op de kaart: Unknown",
+ "metaTitle": "Gideon's Gym - Boksen bij Gideon's Gym",
+ "metaDesc": "Gideon's Gym is een sportschool in Almelo waar je kunt boksen. Bekijk hier meer info over de locatie!",
+ "nearby": [
+  {
+   "name": "FITT Functional Training",
+   "href": "/fitt-functional-training/"
+  },
+  {
+   "name": "Fight Academy Almelo",
+   "href": "/fight-academy-almelo/"
+  },
+  {
+   "name": "Personal Boxing",
+   "href": "/personal-boxing/"
+  },
+  {
+   "name": "Personal Training Almelo",
+   "href": "/personal-training-almelo/"
+  },
+  {
+   "name": "Scorpio Gym",
+   "href": "/scorpio-gym/"
+  },
+  {
+   "name": "The Boxing Club Almelo",
+   "href": "/the-boxing-club-almelo/"
+  },
+  {
+   "name": "Tony’s Gym",
+   "href": "/tony-s-gym/"
+  },
+  {
+   "name": "your personal skills",
+   "href": "/your-personal-skills/"
+  }
+ ]
+}

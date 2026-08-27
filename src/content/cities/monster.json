@@ -1,0 +1,25 @@
+{
+ "title": "Boksscholen in Monster",
+ "city": "Monster",
+ "metaTitle": "Boksen sportscholen in Monster",
+ "metaDesc": "Op zoek naar boksen in Monster? Bekijk hier de beste boksscholen in Monster!",
+ "intro": "Ben jij op zoek naar een boksschool in Monster? Dan ben je hier aan het juiste adres! In Monster kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Monster overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "COMBAT TRAINING CENTER",
+   "href": "/combat-training-center/"
+  },
+  {
+   "name": "Pure Athletics",
+   "href": "/pure-athletics/"
+  },
+  {
+   "name": "Sha Sportclinics",
+   "href": "/sha-sportclinics/"
+  },
+  {
+   "name": "West Coast Gym",
+   "href": "/west-coast-gym/"
+  }
+ ]
+}

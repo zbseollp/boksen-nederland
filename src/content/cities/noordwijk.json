@@ -1,0 +1,33 @@
+{
+ "title": "Boksscholen in Noordwijk",
+ "city": "Noordwijk",
+ "metaTitle": "Boksen sportscholen in Noordwijk",
+ "metaDesc": "Op zoek naar boksen in Noordwijk? Bekijk hier de beste boksscholen in Noordwijk!",
+ "intro": "Ben jij op zoek naar een boksschool in Noordwijk? Dan ben je hier aan het juiste adres! In Noordwijk kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Noordwijk overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Born to Fight",
+   "href": "/born-to-fight/"
+  },
+  {
+   "name": "boks-spullen",
+   "href": "/boks-spullen/"
+  },
+  {
+   "name": "Gymbox Crossfit aan Zee",
+   "href": "/gymbox-crossfit-aan-zee/"
+  },
+  {
+   "name": "Olympia Sport and Health",
+   "href": "/olympia-sport-and-health/"
+  },
+  {
+   "name": "Showtime Gym",
+   "href": "/showtime-gym/"
+  },
+  {
+   "name": "Sport&Go",
+   "href": "/sport-go/"
+  }
+ ]
+}

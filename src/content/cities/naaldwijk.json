@@ -1,0 +1,41 @@
+{
+ "title": "Boksscholen in Naaldwijk",
+ "city": "Naaldwijk",
+ "metaTitle": "Boksen sportscholen in Naaldwijk",
+ "metaDesc": "Op zoek naar boksen in Naaldwijk? Bekijk hier de beste boksscholen in Naaldwijk!",
+ "intro": "Ben jij op zoek naar een boksschool in Naaldwijk? Dan ben je hier aan het juiste adres! In Naaldwijk kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Naaldwijk overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Boksvereniging Westland",
+   "href": "/boksvereniging-westland/"
+  },
+  {
+   "name": "CrossFit 0174",
+   "href": "/crossfit-0174/"
+  },
+  {
+   "name": "Defence Academy",
+   "href": "/defence-academy/"
+  },
+  {
+   "name": "FitCombat",
+   "href": "/fitcombat/"
+  },
+  {
+   "name": "Fitxprnc Healthclub",
+   "href": "/fitxprnc-healthclub/"
+  },
+  {
+   "name": "High Performance Studio",
+   "href": "/high-performance-studio/"
+  },
+  {
+   "name": "Strong PT",
+   "href": "/strong-pt/"
+  },
+  {
+   "name": "Tony's Boxing Boutique",
+   "href": "/tony-s-boxing-boutique/"
+  }
+ ]
+}

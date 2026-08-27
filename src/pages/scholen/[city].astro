@@ -1,0 +1,97 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const cities = await getCollection('cities');
+  const gyms = await getCollection('gyms');
+
+  return cities.map((entry) => ({
+    params: { city: entry.id },
+    props: {
+      entry,
+      gyms: gyms
+        .filter((g) => g.data.citySlug === entry.id)
+        .sort((a, b) => a.data.title.localeCompare(b.data.title, 'nl')),
+    },
+  }));
+}
+
+const { entry, gyms } = Astro.props;
+const d = entry.data;
+
+// vermeldingen uit de bron-pagina die (nog) geen eigen collectie-item hebben
+const known = new Set(gyms.map((g: any) => `/${g.id}/`));
+const extra = (d.gyms || []).filter((g: any) => !known.has(g.href));
+const total = gyms.length + extra.length;
+---
+
+<BaseLayout
+  title={d.metaTitle || `Boksen in ${d.city} — Boksen-Nederland.nl`}
+  description={d.metaDesc || `Alle boksscholen en sportscholen in ${d.city} waar je kunt boksen.`}
+>
+  <section class="hero">
+    <div class="wrap lead">
+      <h1>Boksen in {d.city}</h1>
+      <p>
+        {d.intro ||
+          `Op zoek naar een boksschool in ${d.city}? Hieronder vind je alle sportscholen in ${d.city} waar je kunt boksen, met adres, contactgegevens en trainingstijden.`}
+      </p>
+      <p class="hero-sub">{total} {total === 1 ? 'sportschool' : 'sportscholen'} gevonden in {d.city}.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Kruimelpad">
+      <a href="/">Home</a> &rsaquo; <a href="/scholen/">Boksscholen</a> &rsaquo;
+      <span>{d.city}</span>
+    </nav>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Boksscholen in {d.city}</h2>
+        <p>Klik op een sportschool voor adres, contactgegevens en trainingstijden.</p>
+      </div>
+
+      {gyms.length > 0 && (
+        <div class="grid grid-3">
+          {gyms.map((g: any) => (
+            <a class="tile" href={`/${g.id}/`}>
+              <strong>{g.data.title}</strong>
+              <span>{g.data.address || d.city}</span>
+            </a>
+          ))}
+        </div>
+      )}
+
+      {extra.length > 0 && (
+        <>
+          <h3 style="margin-top:2.5rem">Overige sportscholen</h3>
+          <ul class="chip-list">
+            {extra.map((g: any) => (
+              <li><a href={g.href}>{g.name}</a></li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      {total === 0 && (
+        <p>Er zijn nog geen sportscholen bekend in {d.city}.</p>
+      )}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Sportschool toevoegen?</h2>
+          <p>Mis je een boksschool in {d.city}? Laat het ons weten.</p>
+        </div>
+        <a class="btn" href="/contact/">Neem contact op</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

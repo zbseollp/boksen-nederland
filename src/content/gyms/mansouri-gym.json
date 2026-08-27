@@ -1,0 +1,41 @@
+{
+ "title": "Mansouri Gym",
+ "city": "Helmond",
+ "citySlug": "helmond",
+ "website": "http://www.mansourigym.nl/",
+ "phone": "+31 6 38395870",
+ "address": "Helmond, Binderseind 21",
+ "lastUpdated": "25-01-2024",
+ "intro": "Mansouri Gym is een sportschool in Helmond waar je boksen kunt beoefenen. Op Boksen-Nederland.nl proberen wij actuele informatie over Mansouri Gym te verzamelen. Ben jij op zoek naar een proefles boksen in Helmond? Neem dan contact op met Mansouri Gym of bekijk andere sportscholen waar je boksen kunt beoefenen in Helmond.",
+ "schedule": "Bekijk hieronder de Mansouri Gym trainingstijden: De trainingstijden zijn onbekend. Bent u de eigenaar van deze sportschool en wilt u de trainingstijden toevoegen? Neem dan contact met ons op!",
+ "costs": "De contributie voor een abonnement bij Mansouri Gym is ons niet bekend. Neem contact op met de sportschool voor uitgebreide informatie met betrekking tot abonnementen.",
+ "locationNote": "Bekijk hieronder de locatie van Mansouri Gym in Helmond op de kaart: Unknown",
+ "metaTitle": "Mansouri Gym - Boksen bij Mansouri Gym",
+ "metaDesc": "Mansouri Gym is een sportschool in Helmond waar je kunt boksen. Bekijk hier meer info over de locatie!",
+ "nearby": [
+  {
+   "name": "CSA Helmond",
+   "href": "/csa-helmond/"
+  },
+  {
+   "name": "CrossFit Helmond",
+   "href": "/crossfit-helmond/"
+  },
+  {
+   "name": "GymBokx",
+   "href": "/gymbokx/"
+  },
+  {
+   "name": "Martial Arts Centrum Helmond",
+   "href": "/martial-arts-centrum-helmond/"
+  },
+  {
+   "name": "Powerhouse Helmond",
+   "href": "/powerhouse-helmond/"
+  },
+  {
+   "name": "Team Holzken & Helmondse Amateur",
+   "href": "/team-holzken-helmondse-amateur/"
+  }
+ ]
+}

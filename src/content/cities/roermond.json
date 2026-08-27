@@ -1,0 +1,41 @@
+{
+ "title": "Boksscholen in Roermond",
+ "city": "Roermond",
+ "metaTitle": "Boksen sportscholen in Roermond",
+ "metaDesc": "Op zoek naar boksen in Roermond? Bekijk hier de beste boksscholen in Roermond!",
+ "intro": "Ben jij op zoek naar een boksschool in Roermond? Dan ben je hier aan het juiste adres! In Roermond kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Roermond overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Allstimula Training Center",
+   "href": "/allstimula-training-center/"
+  },
+  {
+   "name": "CrossFit 0475",
+   "href": "/crossfit-0475/"
+  },
+  {
+   "name": "Fitletic Gym Roermond",
+   "href": "/fitletic-gym-roermond/"
+  },
+  {
+   "name": "Kurt Fight Academy",
+   "href": "/kurt-fight-academy/"
+  },
+  {
+   "name": "Lesly's Sportstudio",
+   "href": "/lesly-s-sportstudio/"
+  },
+  {
+   "name": "MV personal training",
+   "href": "/mv-personal-training/"
+  },
+  {
+   "name": "Spartan Gym",
+   "href": "/spartan-gym/"
+  },
+  {
+   "name": "il fiore healthcenters Roermond",
+   "href": "/il-fiore-healthcenters-roermond/"
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "title": "Boksscholen in Hengelo",
+ "city": "Hengelo",
+ "metaTitle": "Boksen sportscholen in Hengelo",
+ "metaDesc": "Op zoek naar boksen in Hengelo? Bekijk hier de beste boksscholen in Hengelo!",
+ "intro": "Ben jij op zoek naar een boksschool in Hengelo? Dan ben je hier aan het juiste adres! In Hengelo kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Hengelo overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "All it takes Hengelo",
+   "href": "/all-it-takes-hengelo/"
+  },
+  {
+   "name": "CLUB-LIFE",
+   "href": "/club-life/"
+  },
+  {
+   "name": "Fit-Fight Dojo",
+   "href": "/fit-fight-dojo/"
+  },
+  {
+   "name": "Fitaholics Personal Training",
+   "href": "/fitaholics-personal-training/"
+  },
+  {
+   "name": "GewoonSterk",
+   "href": "/gewoonsterk/"
+  },
+  {
+   "name": "Nova Health Lifestyle Coaching",
+   "href": "/nova-health-lifestyle-coaching/"
+  },
+  {
+   "name": "Sport7 Training & Coaching",
+   "href": "/sport7-training-coaching/"
+  },
+  {
+   "name": "Tom's Kickboksen",
+   "href": "/tom-s-kickboksen/"
+  }
+ ]
+}

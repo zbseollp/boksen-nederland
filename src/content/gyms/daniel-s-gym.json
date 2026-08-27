@@ -1,0 +1,37 @@
+{
+ "title": "Daniel's Gym",
+ "city": "Boxtel",
+ "citySlug": "boxtel",
+ "website": "https://www.danielsgym.nl/",
+ "phone": "+31 411 755 287",
+ "address": "Boxtel, Markt 29",
+ "lastUpdated": "25-01-2024",
+ "intro": "Daniel's Gym is een sportschool in Boxtel waar je boksen kunt beoefenen. Op Boksen-Nederland.nl proberen wij actuele informatie over Daniel's Gym te verzamelen. Ben jij op zoek naar een proefles boksen in Boxtel? Neem dan contact op met Daniel's Gym of bekijk andere sportscholen waar je boksen kunt beoefenen in Boxtel.",
+ "schedule": "Bekijk hieronder de Daniel's Gym trainingstijden: De trainingstijden zijn onbekend. Bent u de eigenaar van deze sportschool en wilt u de trainingstijden toevoegen? Neem dan contact met ons op!",
+ "costs": "De contributie voor een abonnement bij Daniel's Gym is ons niet bekend. Neem contact op met de sportschool voor uitgebreide informatie met betrekking tot abonnementen.",
+ "locationNote": "Bekijk hieronder de locatie van Daniel's Gym in Boxtel op de kaart: Unknown",
+ "metaTitle": "Daniel's Gym - Boksen bij Daniel's Gym",
+ "metaDesc": "Daniel's Gym is een sportschool in Boxtel waar je kunt boksen. Bekijk hier meer info over de locatie!",
+ "nearby": [
+  {
+   "name": "4 Defence",
+   "href": "/4-defence/"
+  },
+  {
+   "name": "CrossFit Boxtel",
+   "href": "/crossfit-boxtel/"
+  },
+  {
+   "name": "Defence Center Boxtel",
+   "href": "/defence-center-boxtel/"
+  },
+  {
+   "name": "Pitbull Boxing",
+   "href": "/pitbull-boxing/"
+  },
+  {
+   "name": "True Health Members",
+   "href": "/true-health-members/"
+  }
+ ]
+}

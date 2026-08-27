@@ -1,0 +1,49 @@
+{
+ "title": "Boksscholen in Deventer",
+ "city": "Deventer",
+ "metaTitle": "Boksen sportscholen in Deventer",
+ "metaDesc": "Op zoek naar boksen in Deventer? Bekijk hier de beste boksscholen in Deventer!",
+ "intro": "Ben jij op zoek naar een boksschool in Deventer? Dan ben je hier aan het juiste adres! In Deventer kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Deventer overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "BoxingPassial",
+   "href": "/boxingpassial/"
+  },
+  {
+   "name": "Chock Dee Deventer",
+   "href": "/chock-dee-deventer/"
+  },
+  {
+   "name": "Fit For Life Sports",
+   "href": "/fit-for-life-sports/"
+  },
+  {
+   "name": "Kickboxing Light",
+   "href": "/kickboxing-light/"
+  },
+  {
+   "name": "Krav Maga Deventer",
+   "href": "/krav-maga-deventer/"
+  },
+  {
+   "name": "Kung Fu Deventer",
+   "href": "/kung-fu-deventer/"
+  },
+  {
+   "name": "Rog's Gym",
+   "href": "/rog-s-gym/"
+  },
+  {
+   "name": "Sportschool Akdeniz",
+   "href": "/sportschool-akdeniz/"
+  },
+  {
+   "name": "Studio Geronimo",
+   "href": "/studio-geronimo/"
+  },
+  {
+   "name": "The Studio T'ai Chi",
+   "href": "/the-studio-t-ai-chi/"
+  }
+ ]
+}

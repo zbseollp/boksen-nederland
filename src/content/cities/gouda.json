@@ -1,0 +1,49 @@
+{
+ "title": "Boksscholen in Gouda",
+ "city": "Gouda",
+ "metaTitle": "Boksen sportscholen in Gouda",
+ "metaDesc": "Op zoek naar boksen in Gouda? Bekijk hier de beste boksscholen in Gouda!",
+ "intro": "Ben jij op zoek naar een boksschool in Gouda? Dan ben je hier aan het juiste adres! In Gouda kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Gouda overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Bengala Gym",
+   "href": "/bengala-gym/"
+  },
+  {
+   "name": "Bodytuning Personal Training",
+   "href": "/bodytuning-personal-training/"
+  },
+  {
+   "name": "Boxing Club Olympus",
+   "href": "/boxing-club-olympus/"
+  },
+  {
+   "name": "Budo Top Nederland",
+   "href": "/budo-top-nederland/"
+  },
+  {
+   "name": "Den Edel Fun To Be Fit",
+   "href": "/den-edel-fun-to-be-fit/"
+  },
+  {
+   "name": "Gymboxx Gouda",
+   "href": "/gymboxx-gouda/"
+  },
+  {
+   "name": "Premium Boxing Club Gouda",
+   "href": "/premium-boxing-club-gouda/"
+  },
+  {
+   "name": "Silent Dragon Holland",
+   "href": "/silent-dragon-holland/"
+  },
+  {
+   "name": "SportCity Gouda",
+   "href": "/sportcity-gouda/"
+  },
+  {
+   "name": "Taekwondo Akabbouz Gouda",
+   "href": "/taekwondo-akabbouz-gouda/"
+  }
+ ]
+}

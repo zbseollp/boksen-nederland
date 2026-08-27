@@ -1,0 +1,21 @@
+{
+ "title": "Boksscholen in Stiens",
+ "city": "Stiens",
+ "metaTitle": "Boksen sportscholen in Stiens",
+ "metaDesc": "Op zoek naar boksen in Stiens? Bekijk hier de beste boksscholen in Stiens!",
+ "intro": "Ben jij op zoek naar een boksschool in Stiens? Dan ben je hier aan het juiste adres! In Stiens kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Stiens overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Body Move Stiens",
+   "href": "/body-move-stiens/"
+  },
+  {
+   "name": "SaniTu",
+   "href": "/sanitu/"
+  },
+  {
+   "name": "Studio Fysiek",
+   "href": "/studio-fysiek/"
+  }
+ ]
+}

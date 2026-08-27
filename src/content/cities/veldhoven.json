@@ -1,0 +1,29 @@
+{
+ "title": "Boksscholen in Veldhoven",
+ "city": "Veldhoven",
+ "metaTitle": "Boksen sportscholen in Veldhoven",
+ "metaDesc": "Op zoek naar boksen in Veldhoven? Bekijk hier de beste boksscholen in Veldhoven!",
+ "intro": "Ben jij op zoek naar een boksschool in Veldhoven? Dan ben je hier aan het juiste adres! In Veldhoven kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Veldhoven overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "KoryoSports",
+   "href": "/koryosports/"
+  },
+  {
+   "name": "Koryukan MMA fight factory",
+   "href": "/koryukan-mma-fight-factory/"
+  },
+  {
+   "name": "NB Fit & Healthy",
+   "href": "/nb-fit-healthy/"
+  },
+  {
+   "name": "Sportcentrum Artisport",
+   "href": "/sportcentrum-artisport/"
+  },
+  {
+   "name": "Team Xplosion",
+   "href": "/team-xplosion/"
+  }
+ ]
+}

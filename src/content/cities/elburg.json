@@ -1,0 +1,21 @@
+{
+ "title": "Boksscholen in Elburg",
+ "city": "Elburg",
+ "metaTitle": "Boksen sportscholen in Elburg",
+ "metaDesc": "Op zoek naar boksen in Elburg? Bekijk hier de beste boksscholen in Elburg!",
+ "intro": "Ben jij op zoek naar een boksschool in Elburg? Dan ben je hier aan het juiste adres! In Elburg kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Elburg overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Força Fit",
+   "href": "/forca-fit/"
+  },
+  {
+   "name": "GT Trainingen",
+   "href": "/gt-trainingen/"
+  },
+  {
+   "name": "TRAINN.",
+   "href": "/trainn-/"
+  }
+ ]
+}

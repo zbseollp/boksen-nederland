@@ -1,0 +1,29 @@
+{
+ "title": "Boksscholen in Rosmalen",
+ "city": "Rosmalen",
+ "metaTitle": "Boksen sportscholen in Rosmalen",
+ "metaDesc": "Op zoek naar boksen in Rosmalen? Bekijk hier de beste boksscholen in Rosmalen!",
+ "intro": "Ben jij op zoek naar een boksschool in Rosmalen? Dan ben je hier aan het juiste adres! In Rosmalen kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Rosmalen overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "DMP Training",
+   "href": "/dmp-training/"
+  },
+  {
+   "name": "HVO personal training",
+   "href": "/hvo-personal-training/"
+  },
+  {
+   "name": "Kickstart Rosmalen",
+   "href": "/kickstart-rosmalen/"
+  },
+  {
+   "name": "The Gym II: TvS Training",
+   "href": "/the-gym-ii-tvs-training/"
+  },
+  {
+   "name": "The Gym: TvS Training",
+   "href": "/the-gym-tvs-training/"
+  }
+ ]
+}

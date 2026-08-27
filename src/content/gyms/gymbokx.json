@@ -1,0 +1,41 @@
+{
+ "title": "GymBokx",
+ "city": "Helmond",
+ "citySlug": "helmond",
+ "website": "http://www.gymbokx.nl/",
+ "phone": "+31 492 770 045",
+ "address": "Helmond, Kanaaldijk N.W. 27",
+ "lastUpdated": "25-01-2024",
+ "intro": "GymBokx is een sportschool in Helmond waar je boksen kunt beoefenen. Op Boksen-Nederland.nl proberen wij actuele informatie over GymBokx te verzamelen. Ben jij op zoek naar een proefles boksen in Helmond? Neem dan contact op met GymBokx of bekijk andere sportscholen waar je boksen kunt beoefenen in Helmond.",
+ "schedule": "Bekijk hieronder de GymBokx trainingstijden: De trainingstijden zijn onbekend. Bent u de eigenaar van deze sportschool en wilt u de trainingstijden toevoegen? Neem dan contact met ons op!",
+ "costs": "De contributie voor een abonnement bij GymBokx is ons niet bekend. Neem contact op met de sportschool voor uitgebreide informatie met betrekking tot abonnementen.",
+ "locationNote": "Bekijk hieronder de locatie van GymBokx in Helmond op de kaart: Unknown",
+ "metaTitle": "GymBokx - Boksen bij GymBokx",
+ "metaDesc": "GymBokx is een sportschool in Helmond waar je kunt boksen. Bekijk hier meer info over de locatie!",
+ "nearby": [
+  {
+   "name": "CSA Helmond",
+   "href": "/csa-helmond/"
+  },
+  {
+   "name": "CrossFit Helmond",
+   "href": "/crossfit-helmond/"
+  },
+  {
+   "name": "Mansouri Gym",
+   "href": "/mansouri-gym/"
+  },
+  {
+   "name": "Martial Arts Centrum Helmond",
+   "href": "/martial-arts-centrum-helmond/"
+  },
+  {
+   "name": "Powerhouse Helmond",
+   "href": "/powerhouse-helmond/"
+  },
+  {
+   "name": "Team Holzken & Helmondse Amateur",
+   "href": "/team-holzken-helmondse-amateur/"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "title": "Boksscholen in Soest",
+ "city": "Soest",
+ "metaTitle": "Boksen sportscholen in Soest",
+ "metaDesc": "Op zoek naar boksen in Soest? Bekijk hier de beste boksscholen in Soest!",
+ "intro": "Ben jij op zoek naar een boksschool in Soest? Dan ben je hier aan het juiste adres! In Soest kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Soest overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Box In Shape",
+   "href": "/box-in-shape/"
+  },
+  {
+   "name": "CS Body Improvement",
+   "href": "/cs-body-improvement/"
+  },
+  {
+   "name": "Diermen Sport Sportschool Van",
+   "href": "/diermen-sport-sportschool-van/"
+  },
+  {
+   "name": "Dire Gym",
+   "href": "/dire-gym/"
+  },
+  {
+   "name": "XaviFit",
+   "href": "/xavifit/"
+  }
+ ]
+}

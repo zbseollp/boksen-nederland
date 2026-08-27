@@ -1,0 +1,21 @@
+{
+ "title": "Boksscholen in Franeker",
+ "city": "Franeker",
+ "metaTitle": "Boksen sportscholen in Franeker",
+ "metaDesc": "Op zoek naar boksen in Franeker? Bekijk hier de beste boksscholen in Franeker!",
+ "intro": "Ben jij op zoek naar een boksschool in Franeker? Dan ben je hier aan het juiste adres! In Franeker kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Franeker overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Gym Merza",
+   "href": "/gym-merza/"
+  },
+  {
+   "name": "Sportcentrum Shape",
+   "href": "/sportcentrum-shape/"
+  },
+  {
+   "name": "Sportcentrum het Noord",
+   "href": "/sportcentrum-het-noord/"
+  }
+ ]
+}

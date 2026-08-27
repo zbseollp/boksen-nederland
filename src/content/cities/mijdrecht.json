@@ -1,0 +1,25 @@
+{
+ "title": "Boksscholen in Mijdrecht",
+ "city": "Mijdrecht",
+ "metaTitle": "Boksen sportscholen in Mijdrecht",
+ "metaDesc": "Op zoek naar boksen in Mijdrecht? Bekijk hier de beste boksscholen in Mijdrecht!",
+ "intro": "Ben jij op zoek naar een boksschool in Mijdrecht? Dan ben je hier aan het juiste adres! In Mijdrecht kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Mijdrecht overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Gym Suppan",
+   "href": "/gym-suppan/"
+  },
+  {
+   "name": "J-Sports",
+   "href": "/j-sports/"
+  },
+  {
+   "name": "WLC Trainingen",
+   "href": "/wlc-trainingen/"
+  },
+  {
+   "name": "WillMove",
+   "href": "/willmove/"
+  }
+ ]
+}

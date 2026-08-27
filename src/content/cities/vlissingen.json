@@ -1,0 +1,29 @@
+{
+ "title": "Boksscholen in Vlissingen",
+ "city": "Vlissingen",
+ "metaTitle": "Boksen sportscholen in Vlissingen",
+ "metaDesc": "Op zoek naar boksen in Vlissingen? Bekijk hier de beste boksscholen in Vlissingen!",
+ "intro": "Ben jij op zoek naar een boksschool in Vlissingen? Dan ben je hier aan het juiste adres! In Vlissingen kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Vlissingen overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Basic-Fit Vlissingen",
+   "href": "/basic-fit-vlissingen/"
+  },
+  {
+   "name": "Boksclub D.O.S.",
+   "href": "/boksclub-d-o-s-/"
+  },
+  {
+   "name": "Gorilla Gym",
+   "href": "/gorilla-gym/"
+  },
+  {
+   "name": "Karkach GYM",
+   "href": "/karkach-gym/"
+  },
+  {
+   "name": "Zeeuws-Fit",
+   "href": "/zeeuws-fit/"
+  }
+ ]
+}

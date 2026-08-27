@@ -1,0 +1,25 @@
+{
+ "title": "Boksscholen in Sliedrecht",
+ "city": "Sliedrecht",
+ "metaTitle": "Boksen sportscholen in Sliedrecht",
+ "metaDesc": "Op zoek naar boksen in Sliedrecht? Bekijk hier de beste boksscholen in Sliedrecht!",
+ "intro": "Ben jij op zoek naar een boksschool in Sliedrecht? Dan ben je hier aan het juiste adres! In Sliedrecht kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Sliedrecht overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "BUDOKAI WOR",
+   "href": "/budokai-wor/"
+  },
+  {
+   "name": "Sportcentrum Alblasserwaard",
+   "href": "/sportcentrum-alblasserwaard/"
+  },
+  {
+   "name": "Sportcentrum Sport Fysiek",
+   "href": "/sportcentrum-sport-fysiek/"
+  },
+  {
+   "name": "Sportschool Tromp Sliedrecht",
+   "href": "/sportschool-tromp-sliedrecht/"
+  }
+ ]
+}

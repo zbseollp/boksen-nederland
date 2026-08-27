@@ -1,0 +1,21 @@
+{
+ "title": "Boksscholen in Den Burg",
+ "city": "Den Burg",
+ "metaTitle": "Boksen sportscholen in Den Burg",
+ "metaDesc": "Op zoek naar boksen in Den Burg? Bekijk hier de beste boksscholen in Den Burg!",
+ "intro": "Ben jij op zoek naar een boksschool in Den Burg? Dan ben je hier aan het juiste adres! In Den Burg kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Den Burg overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Kelly Dynamics",
+   "href": "/kelly-dynamics/"
+  },
+  {
+   "name": "Lust for Sport",
+   "href": "/lust-for-sport/"
+  },
+  {
+   "name": "Stay Fit Texel",
+   "href": "/stay-fit-texel/"
+  }
+ ]
+}

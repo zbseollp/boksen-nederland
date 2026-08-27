@@ -1,0 +1,33 @@
+{
+ "title": "Boksscholen in Ridderkerk",
+ "city": "Ridderkerk",
+ "metaTitle": "Boksen sportscholen in Ridderkerk",
+ "metaDesc": "Op zoek naar boksen in Ridderkerk? Bekijk hier de beste boksscholen in Ridderkerk!",
+ "intro": "Ben jij op zoek naar een boksschool in Ridderkerk? Dan ben je hier aan het juiste adres! In Ridderkerk kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Ridderkerk overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Boxing Dias",
+   "href": "/boxing-dias/"
+  },
+  {
+   "name": "DFC Ridderkerk",
+   "href": "/dfc-ridderkerk/"
+  },
+  {
+   "name": "Kicks Ridderkerk",
+   "href": "/kicks-ridderkerk/"
+  },
+  {
+   "name": "Skanders Ridderkerk",
+   "href": "/skanders-ridderkerk/"
+  },
+  {
+   "name": "Stichting Kicks",
+   "href": "/stichting-kicks/"
+  },
+  {
+   "name": "WorkoutCentre Be You",
+   "href": "/workoutcentre-be-you/"
+  }
+ ]
+}

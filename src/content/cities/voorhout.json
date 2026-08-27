@@ -1,0 +1,25 @@
+{
+ "title": "Boksscholen in Voorhout",
+ "city": "Voorhout",
+ "metaTitle": "Boksen sportscholen in Voorhout",
+ "metaDesc": "Op zoek naar boksen in Voorhout? Bekijk hier de beste boksscholen in Voorhout!",
+ "intro": "Ben jij op zoek naar een boksschool in Voorhout? Dan ben je hier aan het juiste adres! In Voorhout kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Voorhout overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "PersonalInez",
+   "href": "/personalinez/"
+  },
+  {
+   "name": "ProFit Bodytec",
+   "href": "/profit-bodytec/"
+  },
+  {
+   "name": "Sportschool Kaizen",
+   "href": "/sportschool-kaizen/"
+  },
+  {
+   "name": "TH Sport & Fitness",
+   "href": "/th-sport-fitness/"
+  }
+ ]
+}

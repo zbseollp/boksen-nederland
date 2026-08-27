@@ -1,0 +1,33 @@
+{
+ "title": "Boksscholen in Landgraaf",
+ "city": "Landgraaf",
+ "metaTitle": "Boksen sportscholen in Landgraaf",
+ "metaDesc": "Op zoek naar boksen in Landgraaf? Bekijk hier de beste boksscholen in Landgraaf!",
+ "intro": "Ben jij op zoek naar een boksschool in Landgraaf? Dan ben je hier aan het juiste adres! In Landgraaf kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Landgraaf overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "HG Attack & Defence System",
+   "href": "/hg-attack-defence-system/"
+  },
+  {
+   "name": "Health Club Landgraaf",
+   "href": "/health-club-landgraaf/"
+  },
+  {
+   "name": "Ikbenfit",
+   "href": "/ikbenfit/"
+  },
+  {
+   "name": "MW team",
+   "href": "/mw-team/"
+  },
+  {
+   "name": "Martialartscentrum Silvertand",
+   "href": "/martialartscentrum-silvertand/"
+  },
+  {
+   "name": "The Boxx Sports",
+   "href": "/the-boxx-sports/"
+  }
+ ]
+}

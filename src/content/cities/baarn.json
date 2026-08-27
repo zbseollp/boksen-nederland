@@ -1,0 +1,29 @@
+{
+ "title": "Boksscholen in Baarn",
+ "city": "Baarn",
+ "metaTitle": "Boksen sportscholen in Baarn",
+ "metaDesc": "Op zoek naar boksen in Baarn? Bekijk hier de beste boksscholen in Baarn!",
+ "intro": "Ben jij op zoek naar een boksschool in Baarn? Dan ben je hier aan het juiste adres! In Baarn kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Baarn overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Budofit",
+   "href": "/budofit/"
+  },
+  {
+   "name": "FoxBarz Gym",
+   "href": "/foxbarz-gym/"
+  },
+  {
+   "name": "Kickboxing Institute Baarn",
+   "href": "/kickboxing-institute-baarn/"
+  },
+  {
+   "name": "Moving Smart",
+   "href": "/moving-smart/"
+  },
+  {
+   "name": "the Mind and Physique lab Baarn",
+   "href": "/the-mind-and-physique-lab-baarn/"
+  }
+ ]
+}

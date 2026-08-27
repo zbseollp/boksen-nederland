@@ -1,0 +1,53 @@
+{
+ "title": "Boksscholen in Zoetermeer",
+ "city": "Zoetermeer",
+ "metaTitle": "Boksen sportscholen in Zoetermeer",
+ "metaDesc": "Op zoek naar boksen in Zoetermeer? Bekijk hier de beste boksscholen in Zoetermeer!",
+ "intro": "Ben jij op zoek naar een boksschool in Zoetermeer? Dan ben je hier aan het juiste adres! In Zoetermeer kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Zoetermeer overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Combo gym",
+   "href": "/combo-gym/"
+  },
+  {
+   "name": "FBA Personal Training",
+   "href": "/fba-personal-training/"
+  },
+  {
+   "name": "Gym Vegting",
+   "href": "/gym-vegting/"
+  },
+  {
+   "name": "Huk-Tti Sport Zoetermeer",
+   "href": "/huk-tti-sport-zoetermeer/"
+  },
+  {
+   "name": "Kickboxing Sakura",
+   "href": "/kickboxing-sakura/"
+  },
+  {
+   "name": "Live2bFit",
+   "href": "/live2bfit/"
+  },
+  {
+   "name": "M/M StraatSport",
+   "href": "/m-m-straatsport/"
+  },
+  {
+   "name": "Premium Boxing Club Zoetermeer",
+   "href": "/premium-boxing-club-zoetermeer/"
+  },
+  {
+   "name": "Sportschool Da Graca",
+   "href": "/sportschool-da-graca/"
+  },
+  {
+   "name": "Thai Gym",
+   "href": "/thai-gym/"
+  },
+  {
+   "name": "Zoetermeer Kickbox Academy",
+   "href": "/zoetermeer-kickbox-academy/"
+  }
+ ]
+}

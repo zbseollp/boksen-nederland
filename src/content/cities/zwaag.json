@@ -1,0 +1,37 @@
+{
+ "title": "Boksscholen in Zwaag",
+ "city": "Zwaag",
+ "metaTitle": "Boksen sportscholen in Zwaag",
+ "metaDesc": "Op zoek naar boksen in Zwaag? Bekijk hier de beste boksscholen in Zwaag!",
+ "intro": "Ben jij op zoek naar een boksschool in Zwaag? Dan ben je hier aan het juiste adres! In Zwaag kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Zwaag overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Bikkeltraining",
+   "href": "/bikkeltraining/"
+  },
+  {
+   "name": "Boksschool A.B.O.V.",
+   "href": "/boksschool-a-b-o-v-/"
+  },
+  {
+   "name": "Generation Gym",
+   "href": "/generation-gym/"
+  },
+  {
+   "name": "Petres Gym",
+   "href": "/petres-gym/"
+  },
+  {
+   "name": "RootBoxing",
+   "href": "/rootboxing/"
+  },
+  {
+   "name": "Ser's Gym",
+   "href": "/ser-s-gym/"
+  },
+  {
+   "name": "UNLEASH",
+   "href": "/unleash/"
+  }
+ ]
+}

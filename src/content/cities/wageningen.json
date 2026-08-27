@@ -1,0 +1,25 @@
+{
+ "title": "Boksscholen in Wageningen",
+ "city": "Wageningen",
+ "metaTitle": "Boksen sportscholen in Wageningen",
+ "metaDesc": "Op zoek naar boksen in Wageningen? Bekijk hier de beste boksscholen in Wageningen!",
+ "intro": "Ben jij op zoek naar een boksschool in Wageningen? Dan ben je hier aan het juiste adres! In Wageningen kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Wageningen overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "All Stars Boxing Gym",
+   "href": "/all-stars-boxing-gym/"
+  },
+  {
+   "name": "Blij Bewegen",
+   "href": "/blij-bewegen/"
+  },
+  {
+   "name": "Fight Training Wageningen",
+   "href": "/fight-training-wageningen/"
+  },
+  {
+   "name": "Linda Admiraal Personal Training",
+   "href": "/linda-admiraal-personal-training/"
+  }
+ ]
+}

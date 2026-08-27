@@ -1,0 +1,33 @@
+{
+ "title": "Boksscholen in Sittard",
+ "city": "Sittard",
+ "metaTitle": "Boksen sportscholen in Sittard",
+ "metaDesc": "Op zoek naar boksen in Sittard? Bekijk hier de beste boksscholen in Sittard!",
+ "intro": "Ben jij op zoek naar een boksschool in Sittard? Dan ben je hier aan het juiste adres! In Sittard kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Sittard overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Budo Ryu Sports",
+   "href": "/budo-ryu-sports/"
+  },
+  {
+   "name": "Fight Vision",
+   "href": "/fight-vision/"
+  },
+  {
+   "name": "Fightshop4u B.V.",
+   "href": "/fightshop4u-b-v-/"
+  },
+  {
+   "name": "Go Hard With Ahidar",
+   "href": "/go-hard-with-ahidar/"
+  },
+  {
+   "name": "Jego Gym",
+   "href": "/jego-gym/"
+  },
+  {
+   "name": "Mido Gym",
+   "href": "/mido-gym/"
+  }
+ ]
+}

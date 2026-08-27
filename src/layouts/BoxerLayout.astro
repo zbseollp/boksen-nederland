@@ -1,0 +1,44 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const { entry } = Astro.props;
+const d = entry.data;
+---
+
+<BaseLayout
+  title={d.metaTitle || `${d.title} — Boksen-Nederland.nl`}
+  description={d.description || ""}
+  image={d.heroImage}
+>
+  <div class="gym-head">
+    <div class="wrap">
+      {d.nickname && <span class="city">{d.nickname}</span>}
+      <h1>{d.title}</h1>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Kruimelpad">
+      <a href="/">Home</a> &rsaquo; <a href="/boksers/">Boksers</a> &rsaquo;
+      <span>{d.title}</span>
+    </nav>
+  </div>
+
+  <section class="section">
+    <div class="wrap-narrow prose">
+      <slot />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Zelf beginnen met boksen?</h2>
+          <p>Vind een boksschool bij jou in de buurt.</p>
+        </div>
+        <a class="btn" href="/scholen/">Bekijk boksscholen</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

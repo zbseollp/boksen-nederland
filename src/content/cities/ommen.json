@@ -1,0 +1,21 @@
+{
+ "title": "Boksscholen in Ommen",
+ "city": "Ommen",
+ "metaTitle": "Boksen sportscholen in Ommen",
+ "metaDesc": "Op zoek naar boksen in Ommen? Bekijk hier de beste boksscholen in Ommen!",
+ "intro": "Ben jij op zoek naar een boksschool in Ommen? Dan ben je hier aan het juiste adres! In Ommen kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Ommen overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "MarKös Gym",
+   "href": "/markos-gym/"
+  },
+  {
+   "name": "ProFit Gym Fitness Ommen",
+   "href": "/profit-gym-fitness-ommen/"
+  },
+  {
+   "name": "Sportrijk Fit & Gezond",
+   "href": "/sportrijk-fit-gezond/"
+  }
+ ]
+}

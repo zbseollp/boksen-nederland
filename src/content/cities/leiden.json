@@ -1,0 +1,45 @@
+{
+ "title": "Boksscholen in Leiden",
+ "city": "Leiden",
+ "metaTitle": "Boksen sportscholen in Leiden",
+ "metaDesc": "Op zoek naar boksen in Leiden? Bekijk hier de beste boksscholen in Leiden!",
+ "intro": "Ben jij op zoek naar een boksschool in Leiden? Dan ben je hier aan het juiste adres! In Leiden kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Leiden overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "Andrew McGovern",
+   "href": "/andrew-mcgovern/"
+  },
+  {
+   "name": "BUDDHO Leiden",
+   "href": "/buddho-leiden/"
+  },
+  {
+   "name": "Boxing Club Leiden",
+   "href": "/boxing-club-leiden/"
+  },
+  {
+   "name": "D-Healthy - Personal Training",
+   "href": "/d-healthy-personal-training/"
+  },
+  {
+   "name": "Kishido Karate Leiden",
+   "href": "/kishido-karate-leiden/"
+  },
+  {
+   "name": "LuckyGym",
+   "href": "/luckygym/"
+  },
+  {
+   "name": "Team Atlas",
+   "href": "/team-atlas/"
+  },
+  {
+   "name": "Top Team Leiden",
+   "href": "/top-team-leiden/"
+  },
+  {
+   "name": "Universitair Sportcentrum",
+   "href": "/universitair-sportcentrum/"
+  }
+ ]
+}

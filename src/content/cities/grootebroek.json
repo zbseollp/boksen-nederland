@@ -1,0 +1,21 @@
+{
+ "title": "Boksscholen in Grootebroek",
+ "city": "Grootebroek",
+ "metaTitle": "Boksen sportscholen in Grootebroek",
+ "metaDesc": "Op zoek naar boksen in Grootebroek? Bekijk hier de beste boksscholen in Grootebroek!",
+ "intro": "Ben jij op zoek naar een boksschool in Grootebroek? Dan ben je hier aan het juiste adres! In Grootebroek kun je namelijk boksen. Hieronder kun je alle boksscholen in de regio Grootebroek overzichtelijk vinden!",
+ "gyms": [
+  {
+   "name": "BoXpoint",
+   "href": "/boxpoint/"
+  },
+  {
+   "name": "Club FMS",
+   "href": "/club-fms/"
+  },
+  {
+   "name": "Health Sport Instituut Schaper",
+   "href": "/health-sport-instituut-schaper/"
+  }
+ ]
+}

@@ -1,0 +1,337 @@
+{
+ "title": "Fitness Zuiver",
+ "city": "Amsterdam",
+ "citySlug": "amsterdam",
+ "website": "https://zuiveramsterdam.nl/sport",
+ "phone": "+31 20 301 0707",
+ "address": "Amsterdam, Koenenkade 8",
+ "lastUpdated": "25-01-2024",
+ "intro": "Fitness Zuiver is een sportschool in Amsterdam waar je boksen kunt beoefenen. Op Boksen-Nederland.nl proberen wij actuele informatie over Fitness Zuiver te verzamelen. Ben jij op zoek naar een proefles boksen in Amsterdam? Neem dan contact op met Fitness Zuiver of bekijk andere sportscholen waar je boksen kunt beoefenen in Amsterdam.",
+ "schedule": "Bekijk hieronder de Fitness Zuiver trainingstijden: De trainingstijden zijn onbekend. Bent u de eigenaar van deze sportschool en wilt u de trainingstijden toevoegen? Neem dan contact met ons op!",
+ "costs": "De contributie voor een abonnement bij Fitness Zuiver is ons niet bekend. Neem contact op met de sportschool voor uitgebreide informatie met betrekking tot abonnementen.",
+ "locationNote": "Bekijk hieronder de locatie van Fitness Zuiver in Amsterdam op de kaart: Unknown",
+ "metaTitle": "Fitness Zuiver - Boksen bij Fitness Zuiver",
+ "metaDesc": "Fitness Zuiver is een sportschool in Amsterdam waar je kunt boksen. Bekijk hier meer info over de locatie!",
+ "nearby": [
+  {
+   "name": "A&E Lifestyle",
+   "href": "/a-e-lifestyle/"
+  },
+  {
+   "name": "Amstel-PT",
+   "href": "/amstel-pt/"
+  },
+  {
+   "name": "Amsterdam Buitenveldert Sportclub",
+   "href": "/amsterdam-buitenveldert-sportclub/"
+  },
+  {
+   "name": "Amsterdam Kickboksen Outdoor groep- & personal training",
+   "href": "/amsterdam-kickboksen-outdoor-groep-personal-training/"
+  },
+  {
+   "name": "Antoni Aesthetics",
+   "href": "/antoni-aesthetics/"
+  },
+  {
+   "name": "Arena PT",
+   "href": "/arena-pt/"
+  },
+  {
+   "name": "ArenaGym",
+   "href": "/arenagym/"
+  },
+  {
+   "name": "Atletico Amsterdam",
+   "href": "/atletico-amsterdam/"
+  },
+  {
+   "name": "B gym",
+   "href": "/b-gym/"
+  },
+  {
+   "name": "BASECAMPWEST",
+   "href": "/basecampwest/"
+  },
+  {
+   "name": "Basic-Fit Amsterdam",
+   "href": "/basic-fit-amsterdam/"
+  },
+  {
+   "name": "Bink Training",
+   "href": "/bink-training/"
+  },
+  {
+   "name": "Boksen",
+   "href": "/boksen/"
+  },
+  {
+   "name": "Boksschool Bijlmerbajes",
+   "href": "/boksschool-bijlmerbajes/"
+  },
+  {
+   "name": "Bokstherapie.nl",
+   "href": "/bokstherapie-nl/"
+  },
+  {
+   "name": "Boogieland Boxing Club",
+   "href": "/boogieland-boxing-club/"
+  },
+  {
+   "name": "Bootcamp Tai GYM",
+   "href": "/bootcamp-tai-gym/"
+  },
+  {
+   "name": "Boxing Gym ABOV",
+   "href": "/boxing-gym-abov/"
+  },
+  {
+   "name": "Boxing Life Style",
+   "href": "/boxing-life-style/"
+  },
+  {
+   "name": "Boxing Sisters Amsterdam",
+   "href": "/boxing-sisters-amsterdam/"
+  },
+  {
+   "name": "BoxingBoost",
+   "href": "/boxingboost/"
+  },
+  {
+   "name": "BoxingFun",
+   "href": "/boxingfun/"
+  },
+  {
+   "name": "BoxxZuid",
+   "href": "/boxxzuid/"
+  },
+  {
+   "name": "Budo Vereniging Shin",
+   "href": "/budo-vereniging-shin/"
+  },
+  {
+   "name": "Champway PT",
+   "href": "/champway-pt/"
+  },
+  {
+   "name": "Custom Training",
+   "href": "/custom-training/"
+  },
+  {
+   "name": "Danny Smit Personal Training",
+   "href": "/danny-smit-personal-training/"
+  },
+  {
+   "name": "De Bokstrainer",
+   "href": "/de-bokstrainer/"
+  },
+  {
+   "name": "De Buurt Trainer",
+   "href": "/de-buurt-trainer/"
+  },
+  {
+   "name": "De Gymzaal",
+   "href": "/de-gymzaal/"
+  },
+  {
+   "name": "Dojo Doorjé",
+   "href": "/dojo-doorje/"
+  },
+  {
+   "name": "Dybs coaching",
+   "href": "/dybs-coaching/"
+  },
+  {
+   "name": "EMPOWERGYM Amsterdam",
+   "href": "/empowergym-amsterdam/"
+  },
+  {
+   "name": "Eastbound Gym",
+   "href": "/eastbound-gym/"
+  },
+  {
+   "name": "Edit Horvath Personal training",
+   "href": "/edit-horvath-personal-training/"
+  },
+  {
+   "name": "El Otmani Gym",
+   "href": "/el-otmani-gym/"
+  },
+  {
+   "name": "FFC Bijlmer",
+   "href": "/ffc-bijlmer/"
+  },
+  {
+   "name": "FIT MET BAS Kickboksen",
+   "href": "/fit-met-bas-kickboksen/"
+  },
+  {
+   "name": "FITCORPS",
+   "href": "/fitcorps/"
+  },
+  {
+   "name": "Ferox Gym",
+   "href": "/ferox-gym/"
+  },
+  {
+   "name": "Fight Beck Center",
+   "href": "/fight-beck-center/"
+  },
+  {
+   "name": "Fight District",
+   "href": "/fight-district/"
+  },
+  {
+   "name": "FightIQ MMA Gym",
+   "href": "/fightiq-mma-gym/"
+  },
+  {
+   "name": "Foriam Gym",
+   "href": "/foriam-gym/"
+  },
+  {
+   "name": "Freddy’s Gym Amsterdam",
+   "href": "/freddy-s-gym-amsterdam/"
+  },
+  {
+   "name": "Fyscultura",
+   "href": "/fyscultura/"
+  },
+  {
+   "name": "Group Training Zuid",
+   "href": "/group-training-zuid/"
+  },
+  {
+   "name": "Gympact Amsterdam",
+   "href": "/gympact-amsterdam/"
+  },
+  {
+   "name": "Health Club West",
+   "href": "/health-club-west/"
+  },
+  {
+   "name": "Het Gymlokaal Noord",
+   "href": "/het-gymlokaal-noord/"
+  },
+  {
+   "name": "Hofstede Personal Training",
+   "href": "/hofstede-personal-training/"
+  },
+  {
+   "name": "IAMFit",
+   "href": "/iamfit/"
+  },
+  {
+   "name": "Kickboks Fit",
+   "href": "/kickboks-fit/"
+  },
+  {
+   "name": "Kickboksen Zuidas",
+   "href": "/kickboksen-zuidas/"
+  },
+  {
+   "name": "Kickbokslessen Voor Kinderen",
+   "href": "/kickbokslessen-voor-kinderen/"
+  },
+  {
+   "name": "Kimekai Gym",
+   "href": "/kimekai-gym/"
+  },
+  {
+   "name": "Kings Gym Amsterdam",
+   "href": "/kings-gym-amsterdam/"
+  },
+  {
+   "name": "Kops Gym",
+   "href": "/kops-gym/"
+  },
+  {
+   "name": "Legend Gym",
+   "href": "/legend-gym/"
+  },
+  {
+   "name": "Life & Kicking",
+   "href": "/life-kicking/"
+  },
+  {
+   "name": "Lifestyle Personaltrainers",
+   "href": "/lifestyle-personaltrainers/"
+  },
+  {
+   "name": "MOUSID GYM",
+   "href": "/mousid-gym/"
+  },
+  {
+   "name": "Martial Arts Society",
+   "href": "/martial-arts-society/"
+  },
+  {
+   "name": "Mejiro Gym B.V.",
+   "href": "/mejiro-gym-b-v-/"
+  },
+  {
+   "name": "Mindful Boxing",
+   "href": "/mindful-boxing/"
+  },
+  {
+   "name": "Mokum.fit",
+   "href": "/mokum-fit/"
+  },
+  {
+   "name": "Movingwithmotivation",
+   "href": "/movingwithmotivation/"
+  },
+  {
+   "name": "NDSM Fightclub",
+   "href": "/ndsm-fightclub/"
+  },
+  {
+   "name": "Olympic Gym Amsterdam",
+   "href": "/olympic-gym-amsterdam/"
+  },
+  {
+   "name": "OosterGym",
+   "href": "/oostergym/"
+  },
+  {
+   "name": "PTBoxing",
+   "href": "/ptboxing/"
+  },
+  {
+   "name": "Palestra Sports Amsterdam",
+   "href": "/palestra-sports-amsterdam/"
+  },
+  {
+   "name": "Pancration Gym",
+   "href": "/pancration-gym/"
+  },
+  {
+   "name": "Peacemaker Academy",
+   "href": "/peacemaker-academy/"
+  },
+  {
+   "name": "Personal Boks Trainer",
+   "href": "/personal-boks-trainer/"
+  },
+  {
+   "name": "Personal Training Zuid",
+   "href": "/personal-training-zuid/"
+  },
+  {
+   "name": "Poekoelan Kung Fu",
+   "href": "/poekoelan-kung-fu/"
+  },
+  {
+   "name": "Ready2Rumble",
+   "href": "/ready2rumble/"
+  },
+  {
+   "name": "Robby Nelson",
+   "href": "/robby-nelson/"
+  },
+  {
+   "name": "Royal Gym Amsterdam",
+   "href": "/royal-gym-amsterdam/"
+  }
+ ]
+}
