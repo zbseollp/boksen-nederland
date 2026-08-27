@@ -1,62 +1,74 @@
 ---
+import { footerData } from '../data/footer';
+
 const year = new Date().getFullYear();
 
-const bigCities = [
-  { slug: "amsterdam", label: "Amsterdam" },
-  { slug: "rotterdam", label: "Rotterdam" },
-  { slug: "den-haag", label: "Den Haag" },
-  { slug: "utrecht", label: "Utrecht" },
-  { slug: "eindhoven", label: "Eindhoven" },
-  { slug: "groningen", label: "Groningen" },
+// één keer per build berekend, niet per pagina
+const { gymCount, cityCount, topCities } = await footerData;
+
+const sections = [
+  { href: '/scholen/', label: 'Alle boksscholen' },
+  { href: '/boksers/', label: 'Boksers' },
+  { href: '/boksen/', label: 'Boksen' },
+  { href: '/nieuws/', label: 'Nieuws' },
 ];
+
+const about = [
+  { href: '/over-ons/', label: 'Over ons' },
+  { href: '/contact/', label: 'Contact' },
+  { href: '/privacyverklaring/', label: 'Privacyverklaring' },
+  { href: '/algemene-voorwaarden/', label: 'Algemene voorwaarden' },
+  { href: '/sitemap/', label: 'Sitemap' },
+];
+
+const nf = (n: number) => n.toLocaleString('nl-NL');
 ---
 
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-grid">
-      <div>
+      <div class="footer-brand">
         <div class="footer-logo">
-          <img src="/logo.svg" alt="Boksen-Nederland.nl" height="32" />
+          <img src="/logo.svg" alt="Boksen-Nederland.nl" height="30" />
         </div>
         <p>
           Het overzicht van boksscholen en sportscholen in Nederland waar je kunt
-          boksen. Vind een boksschool bij jou in de buurt, bekijk trainingstijden en
-          neem contact op voor een proefles.
+          boksen. {nf(gymCount)} sportscholen in {nf(cityCount)} plaatsen &mdash;
+          vind een school bij jou in de buurt, bekijk trainingstijden en neem contact
+          op voor een proefles.
         </p>
       </div>
 
       <div>
         <h4>Grote steden</h4>
         <ul>
-          {bigCities.map((c) => (
-            <li><a href={`/scholen/${c.slug}/`}>{c.label}</a></li>
+          {topCities.map((c) => (
+            <li><a href={`/scholen/${c.slug}/`}>{c.city}</a></li>
           ))}
         </ul>
       </div>
 
       <div>
-        <h4>Over deze site</h4>
+        <h4>Op de site</h4>
         <ul>
-          <li><a href="/scholen/">Alle boksscholen</a></li>
-          <li><a href="/boksers/">Boksers</a></li>
-          <li><a href="/nieuws/">Nieuws</a></li>
-          <li><a href="/over-ons/">Over ons</a></li>
-          <li><a href="/contact/">Contact</a></li>
+          {sections.map((s) => (
+            <li><a href={s.href}>{s.label}</a></li>
+          ))}
         </ul>
       </div>
 
       <div>
         <h4>Juridisch</h4>
         <ul>
-          <li><a href="/privacyverklaring/">Privacyverklaring</a></li>
-          <li><a href="/algemene-voorwaarden/">Algemene voorwaarden</a></li>
-          <li><a href="/sitemap/">Sitemap</a></li>
+          {about.map((a) => (
+            <li><a href={a.href}>{a.label}</a></li>
+          ))}
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>&copy; {year} Boksen-Nederland.nl — Alle rechten voorbehouden.</span>
+      <span>&copy; {year} Boksen-Nederland.nl &mdash; Alle rechten voorbehouden.</span>
       <span>Boksscholen en sportscholen in heel Nederland.</span>
     </div>
   </div>

@@ -840,11 +840,35 @@ img { max-width: 100%; height: auto; display: block; }
 .site-footer a:hover { color: var(--red-bright); }
 .footer-grid {
   display: grid;
-  gap: 2.5rem;
-  grid-template-columns: 1.7fr repeat(auto-fit, minmax(145px, 1fr));
+  gap: 2.5rem 2rem;
+  /* let op: een fr-track combineren met repeat(auto-fit, ...) is ongeldige CSS
+     en laat de hele declaratie vervallen -> footer klapt in 1 kolom. */
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  align-items: start;
+}
+.footer-brand { grid-column: span 2; min-width: 0; }
+.footer-brand p { max-width: 46ch; }
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+  .footer-grid { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
 }
 .footer-grid ul { list-style: none; padding: 0; margin: 0; }
 .footer-grid li { margin-bottom: .5rem; }
+/* lange artikeltitels in de footer netjes afkappen */
+.footer-grid li a {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.4;
+}
+.footer-grid h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
 .footer-logo img { height: 30px; margin-bottom: 1rem; }
 .footer-bottom {
   margin-top: 2.75rem;
